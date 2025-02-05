@@ -1,0 +1,227 @@
+@import "./reset";
+@import "./variable";
+@import "./function";
+@import "./mixin";
+@import "./typography";
+@import "./layout";
+@import "./list";
+@import "./media";
+@import "./animation";
+@import "./btn";
+@import "./input";
+@import "./header";
+@import "./banner";
+@import "./services";
+@import "./accoridian";
+@import "./footer";
+
+.section2 {
+  overflow: hidden;
+  padding: 6rem 0;
+
+  h2 {
+    position: relative;
+    margin-bottom: 5rem;
+    color: $primary-color;
+    width: fit-content;
+    font-weight: 600;
+  }
+
+  .block__inner {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      -webkit-transform: skew(0deg, 10deg);
+      transform: skew(0deg, 10deg);
+      z-index: -1;
+      background: $primary-color;
+      background-attachment: fixed;
+      background-image: url("../webImages/section2background.svg");
+    }
+  }
+
+  .servicesm {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      background: #fff6eb;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: skew(0deg, 10deg);
+      transform: skew(0deg, 10deg);
+      background-image: url("../webImages/section2background.svg");
+    }
+  }
+
+  .services {
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    &__item {
+      position: relative;
+      background: #fff;
+      padding: 3rem 2rem;
+      border-radius: 2.5rem;
+      box-shadow: 0 0.7rem 2rem #641c0222;
+      transition: all 300ms ease;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -0.1rem;
+        right: -0.1rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem 0;
+        background-color: $primary-color;
+        background-size: 2rem 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../webImages/servicesicon.svg");
+      }
+
+      img {
+        width: 5rem;
+        margin-bottom: 2rem;
+        position: absolute;
+        right: 1.6rem;
+        top: 1.9rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $primary-color;
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: $primary-color;
+        opacity: 0.8;
+        line-height: 1.4;
+      }
+
+      &:hover {
+        transform: translateY(-1rem);
+        background: $primary-color;
+
+        img {
+          filter: brightness(100);
+        }
+
+        &::after {
+          background-color: #fff;
+          background-size: 2rem 2rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../webImages/servicesicon2.svg");
+        }
+
+        h3,
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.section3 {
+  padding: 6rem 0;
+
+  .headingCenter {
+    h2 {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+}
+
+.section4 {
+  padding: 0;
+}
+
+.section5 {
+  align-items: center;
+
+  &__left {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__right {
+    background: $primary-color;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+
+    h3,
+    p {
+      color: #fff;
+    }
+
+    i {
+      font-size: 2.6rem;
+      color: $primary-color;
+      position: absolute;
+      left: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+    form {
+      margin-top: 3rem;
+      .call-newsletter {
+        position: relative;
+      }
+    }
+
+    input {
+      width: 45rem;
+      height: 5.6rem;
+      outline: none;
+      border: 0;
+      border-radius: 5rem;
+      background-color: #fff;
+      padding-left: 6rem;
+      padding-right: 3rem;
+    }
+
+    button {
+      border: 0;
+      border-radius: 5rem;
+      height: 4.8rem;
+      padding: 0 3.2rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background-color: $primary-color;
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+}
+
+@import "./innerPage";
+@import "./responsive";

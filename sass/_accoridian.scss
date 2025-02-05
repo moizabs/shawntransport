@@ -1,0 +1,41 @@
+.accordian {
+    margin-bottom: 1rem;
+    box-shadow: 0 0 1.2rem #ccc;
+    background: #fff;
+
+&__heading {
+    cursor: pointer;
+    padding: .5rem 2.0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    i {
+        color: $primary-color;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    &.active {
+        background: $primary-color;
+        h3,i {
+            color: #fff;
+        }
+        i::before {
+            content: "\f068";
+            color: #fff;
+        }
+    }
+}
+&__body {
+    padding: 0rem 1.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    p{
+        padding: 2.0rem 0;
+    }
+    
+}
+}
+
