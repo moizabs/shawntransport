@@ -18,6 +18,8 @@ use App\Http\Controllers\FrontendController;
 //     return view('frontend.home');
 // });
 
+
+
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/car', [FrontendController::class, 'car'])->name('car');
 Route::get('/atv-utv', [FrontendController::class, 'atvUtv'])->name('atv.utv');
