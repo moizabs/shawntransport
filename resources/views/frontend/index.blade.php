@@ -1,7 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <section class="banner relative" style="background: url('{{ asset('webImages/banners/2.jpg') }}'); background-size: cover;">
+    <section class="banner relative"
+        style="background: url('{{ asset('webImages/banners/2.jpg') }}'); background-size: cover;">
         <ul class="list">
             <li class="flex_ flex_space" style="align-items: flex-start;">
                 <div class="banner__Txt">
@@ -136,8 +137,8 @@
                                     <div class="input_box">
                                         <label>Year</label>
                                         <div class="input_">
-                                            <select class="effect-8 vehicle-year" required="" id="year"
-                                                aria-required="true">
+                                            <select class="effect-8 vehicle-year" required="" name="year[]"
+                                                id="year" aria-required="true">
                                                 <option value="" selected="" disabled="">Year</option>
                                             </select>
 
@@ -163,9 +164,10 @@
                                     <div class="input_box">
                                         <label>Make</label>
                                         <div class="input_">
-                                            <select class="effect-8 vehicle-make" requ="" data-placeholder="Make"
-                                                aria-hidden="true">
-                                                <option value="0" selected="" disabled="" data-select2-id="4">
+                                            <select class="effect-8 vehicle-make" requ="" name="make[]"
+                                                data-placeholder="Make" aria-hidden="true">
+                                                <option value="0" selected="" disabled=""
+                                                    data-select2-id="4">
                                                     Make</option>
                                                 <option value="Acura">Acura</option>
                                                 <option value="Alfa Romeo">Alfa Romeo</option>
@@ -259,8 +261,8 @@
                                     <div class="input_box vehicle-model-div">
                                         <label>Model</label>
                                         <div class="input_">
-                                            <select class="effect-8" requ="" data-placeholder="Model"
-                                                aria-hidden="true"></select>
+                                            <select class="effect-8" name="model[]" requ=""
+                                                data-placeholder="Model" aria-hidden="true"></select>
                                             <span class="focus-border">
                                                 <i></i>
                                             </span>
@@ -274,7 +276,7 @@
                                     <div class="col-md-6 pd-lr-5 mb-mb-10">
                                         <div class="form-wrap form-wrap-validation">
                                             <label class="checkbox-inline">
-                                                <input type="checkbox" checked="" name="carrier-type"
+                                                <input type="checkbox" checked="" name="trailer_type"
                                                     class="checkbox-custom" value="1" id="carrier-type"
                                                     data-parsley-multiple="carrier-type"><span
                                                     class="checkbox-custom-dummy"></span>
@@ -285,8 +287,8 @@
                                     <div class="col-md-6 pd-lr-5 mb-mb-10">
                                         <div class="form-wrap form-wrap-validation">
                                             <label class="checkbox-inline">
-                                                <input type="hidden" name="veh-condition[0]" value="1">
-                                                <input type="checkbox" checked="" name="veh-condition[0]"
+                                                <input type="hidden" name="condition[]" value="1">
+                                                <input type="checkbox" checked="" name="condition[]"
                                                     id="vehicle-condition" class="checkbox-custom" value="1"
                                                     data-parsley-multiple="veh-condition0"><span
                                                     class="checkbox-custom-dummy"></span>
