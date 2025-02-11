@@ -1,0 +1,147 @@
+.innerPage {
+    .header {
+        position: relative;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .banner {
+        &__Txt {
+            position: absolute;
+            width: 35%;
+            left: 0;
+            right: 0;
+            padding-top: 0%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            top: 50%;
+            text-align: center;
+        }
+    }
+
+    main {
+        min-height: 80vh;
+    }
+}
+
+.quotemain {
+    .block__inner {
+        &> {
+            h2 {
+                color: $primary-color;
+                margin-bottom: 2rem;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__box {
+        box-shadow: 0 0 1rem #ddd;
+        border: .1rem solid #ddd;
+        padding: 2rem;
+
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $primary-color;
+        }
+    }
+}
+
+.innerServices {
+    .block__inner {
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+    }
+
+    &__left {
+        img {
+            width: 100%;
+        }
+
+        h4 {
+            color: $primary-color;
+        }
+
+        p {
+            text-align: justify;
+
+            a {
+                font-weight: 600;
+                color: $primary-color;
+            }
+        }
+
+        .card {
+            padding: 2rem;
+
+            h2 {
+                color: $primary-color;
+                font-size: 2.2rem;
+            }
+        }
+
+      
+    }
+
+    &__right {
+        img {
+            width: 100%;
+        }
+        .quotemain__box {
+            border: 0.1rem dotted red;
+            .grid_3{
+                gap: 1rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+            }
+            .input_box label {
+                font-weight: 500;
+                font-size: 1.3rem;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.pricePage {
+    .card__main.w-50 {
+        margin: 4rem auto;
+        gap: 2rem;
+    }
+
+    .card {
+        position: relative;
+        transition: .3s;
+        padding: 2rem 3rem;
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        &.discount {
+            h3 {
+                color: $primary-color;
+            }
+
+
+            img {
+                position: absolute;
+                top: -10%;
+                left: -11%;
+                width: 60px;
+            }
+        }
+
+        &:hover {
+            border-color: $primary-color;
+        }
+    }
+}

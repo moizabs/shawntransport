@@ -1,0 +1,149 @@
+@media only screen and (max-width: 979px) {
+    html {
+        font-size: 60%;
+    }
+
+    .grid-col60 {
+        grid-template: auto / 5fr 90fr 5fr;
+    }
+
+    .banner {
+        &__Txt {
+            display: none;
+        }
+
+        &__right {
+            width: 96%;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .OurTeam3 {
+        .block__inner {
+            .media {
+                flex-direction: column;
+
+                &__img,
+                &__body {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .services.grid_3,
+    .services.grid_4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section5 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer {
+        &_m {
+            grid-template-columns: 1fr;
+            gap: 0;
+            padding-bottom: 4rem;
+
+            .footer_box {
+                width: fit-content;
+                margin: 0rem auto;
+                text-align: center;
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    display: none;
+                }
+
+                .flex_,
+                .socialIcon {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .header {
+        &__menu {
+            ul {
+                li {
+                    a {
+                        color: #fff;
+                    }
+
+                    ul {
+                        li {
+                            border-bottom: 1px solid #ddd;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__contact {
+            .right {
+                .call {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .innerPage {
+        .banner__Txt {
+            width: 100%;
+            display: block;
+        }
+
+        .innerServices {
+            .block__inner {
+                grid-template-columns: 1fr;
+
+                .grid_3 {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .services.grid_3,
+    .services.grid_4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .innerPage {
+        .innerServices {
+            .block__inner {
+                .grid_3 {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+
+
+    }
+
+    .section5 {
+        &__right {
+            input {
+                width: 100%;
+            }
+
+             form {
+                width: 100%;
+
+                button {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+}

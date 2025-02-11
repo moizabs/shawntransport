@@ -1,0 +1,262 @@
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 3rem 0 0;
+    background: url(../webImages/Shipping.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #000000d6;
+    }
+}
+
+
+.footer_menu {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #cccccc30;
+}
+
+.footer_menu ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+   
+}
+
+.footer_menu ul li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer_menu ul li a {
+    position: relative;
+    display: block;
+    color: $secondary-color;
+    font-size: 15px;
+    margin-right: 33px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+
+}
+
+.footer_menu ul li:last-child a {
+    margin: 0px;
+}
+
+.footer_menu ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background: #ffffff;
+    left: 0;
+    transition: .5s all;
+    bottom: 0px;
+}
+
+
+
+.footer_menu ul li a:hover:after {
+    width: 100%;
+}
+.footer_menus {
+    margin: 5rem 0 2rem;
+    gap: 4rem;
+    li{
+        position: relative;
+        & + li::before{
+            
+    content: '';
+    position: absolute;
+    left: -2.3rem;
+    top: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: #fff;
+
+        }
+    a {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: #fff;
+        text-transform: uppercase;
+        @include ease-in();
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+}
+.footer_m {
+    grid-template-columns: 1.1fr 0.6fr 0.8fr 1fr;
+    gap: 3rem;
+}
+
+.footer_box {
+    position: relative;
+    width: 100%;
+    margin: 2rem auto;
+
+    .foterm {
+        li {
+            @include ease-in();
+            &::before {
+                content: '';
+            font-family: "Font Awesome 6 Free";
+            content: "\f105";
+            display: inline-block;
+            margin-right: 1rem;
+            vertical-align: middle;
+            font-weight: 900;
+            
+            }
+        }
+    }
+}
+
+.footer_box p {
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 1.6rem;
+    margin: .8rem auto;
+    width: 100%;
+    transition: .3s;
+}
+
+.footer_box ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    &.socialIcon {
+        margin: 2rem 0;
+    }
+}
+
+
+
+.footer_box h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+.footer_box ul li {
+    position: relative;
+    font-weight: 100;
+    color: #ffffff;
+    padding: 2px 0px;
+    text-align: left;
+    transition: .3s;
+}
+
+.footer_box ul li a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.footer_con ul li:hover a {
+    color: $secondary-color;
+}
+
+
+
+
+.footer_bottom {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    background-color: $primary-color;
+    padding: 1rem 0px;
+}
+
+.footer_bottom_ {
+    *{
+        font-weight: 100;
+        color: #fff;
+    }
+    h3 {
+        margin: 0;
+        a{
+            display: inline-block;
+            font-weight: 900;
+            @include ease-in();
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+
+.footer_bottom_txt {
+    a,span {
+        font-size: 1.4rem;
+    }
+    a {
+        margin: 0 .7rem;
+    }
+}
+
+.footer_box {
+    form {
+        position: relative;
+        input {
+            padding: 1.6rem;
+            font-size: 1.4rem;
+        }
+        button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+            border: transparent;
+            background: transparent;
+            padding: 0;
+            padding-right: 1.1rem;
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+}
+ // go to top  
+ .top_side {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: $secondary-color;
+    border: .2rem solid #fff;
+    display: grid;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    @include ease-in(.3s);
+    cursor: pointer;
+    i {
+        color: #fff;
+        font-size: 1.6rem;
+    }
+    &:hover {
+        background: $primary-color;
+    }
+}
