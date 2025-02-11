@@ -6,7 +6,7 @@
             <li class="flex_ flex_space" style="align-items: flex-start;">
                 <div class="banner__Txt">
                     <h2>
-                        Shawn Transportss - Your Trusted &amp; Safest Auto Transportation
+                        Shawn Transport - Your Trusted &amp; Safest Auto Transportation
                     </h2>
                     <p>Welcome to Shawn Transport, the all-in-one spot of affordable, reliable, and safe transport
                         services.
