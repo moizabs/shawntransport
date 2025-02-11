@@ -16,7 +16,6 @@ function getYear() {
     return totalYear;
 }
 
-// $(document).ready(function () {
 $(document).on("change", ".vehicle-year, .vehicle-make", function () {
     var year = $("#year").val(); // Get the selected year
     var makeId = $(".vehicle-make").val(); // Get the selected make
@@ -139,13 +138,13 @@ $(document).on("change", ".vehicle-year, .vehicle-make", function () {
         });
     }
 });
-$("#addVehicle").click(function() {
+$("#addVehicle").click(function () {
     var no = $(this).val();
     no = ++no;
     $(this).val(no);
     no = pad(no);
     var years = getYear();
-    years = years.split('</option><option>');
+    years = years.split("</option><option>");
     $("#addMoreVeh").append(`
         <div id="field">
             <input type="hidden" name="count[]">
@@ -275,13 +274,13 @@ $("#addVehicle").click(function() {
                 </div>
             </div>
         </div>
-    `)
+    `);
     $(`#vehicle-condition${no}`).click(function () {
-        if ($(this).prop('checked')) {
-            $(`#vcond${no}`).html('Running');
+        if ($(this).prop("checked")) {
+            $(`#vcond${no}`).html("Running");
             $(`#condition${no}`).val("operable");
         } else {
-            $(`#vcond${no}`).html('Non-Running');
+            $(`#vcond${no}`).html("Non-Running");
             $(`#condition${no}`).val("non-running");
         }
     });

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +39,9 @@ Route::get('/motorcycle', [FrontendController::class, 'motorcycle'])->name('moto
 Route::get('/pricing', [FrontendController::class, 'pricing'])->name('pricing');
 Route::get('/roro-shipping-international', [FrontendController::class, 'roroShippingInternational'])->name('roro.shipping.international');
 Route::get('/services', [FrontendController::class, 'services'])->name('services');
+
+
+Route::post('/submit/quote', [QuoteController::class, 'store'])->name('submit.quote');
+Route::get('/get-models', [MainController::class, 'getmodel'])->name('get.models');
+// get models on basis of year n make
+Route::post('/get-zipcodes', [MainController::class, 'get_zip'])->name('get.zipcodes');

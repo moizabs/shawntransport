@@ -18,7 +18,10 @@
                     <div class="quotemain__box">
                         <h3>Get Car Quotes <span>- simple, fast &amp; easy!</span></h3>
                         <div class="for-car" id="forCAR">
-                            <form action="#">
+                            <form action="{{ route('submit.quote') }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                                <input type="hidden" name="car_type" value="1" hidden>
                                 <div class="grid grid_3">
                                     <div class="input_box">
                                         <label>Full Name</label>
@@ -82,7 +85,7 @@
                                 </div>
                                 <hr>
                                 <div class="">
-                                    <script type="text/javascript"
+                                    {{-- <script type="text/javascript"
                                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
                                     </script>
 
@@ -102,16 +105,23 @@
                                             });
                                         }
                                         google.maps.event.addDomListener(window, "load", initialize);
-                                    </script>
+                                    </script> --}}
                                     <div class="input_box">
                                         <label>Pickup Location</label>
-                                        <div class="input_">
+                                        {{-- <div class="input_">
                                             <input class="effect-8" requ="" type="text" id="pick_up"
                                                 name="origin" autocomplete="off" placeholder="Ex: 90005 Or Los Angeles"
                                                 required="" aria-required="true">
                                             <span class="focus-border">
                                                 <i></i>
                                             </span>
+                                        </div> --}}
+                                        <div class="input-form">
+                                            <label class="d-block"> Pickup Location:</label>
+                                            <input type="text" class="effect-8" id="pickup-location" name="origin"
+                                                placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                            <small id="errOLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
                                         </div>
                                         <small class="errName"
                                             style="color: red; font-size: 1rem; margin-left: 3px"></small>
@@ -119,13 +129,20 @@
                                 </div>
                                 <div class="input_box">
                                     <label>Delivery Location</label>
-                                    <div class="input_">
+                                    {{-- <div class="input_">
                                         <input class="effect-8 pac-target-input" required="" type="text"
                                             id="pick_up_off" name="destination" autocomplete="off"
                                             placeholder="Ex: 90005 Or Los Angeles" aria-required="true">
                                         <span class="focus-border">
                                             <i></i>
                                         </span>
+                                    </div> --}}
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" class="effect-8" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                     <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
@@ -300,14 +317,14 @@
                                 <button type="button" class="btn btn-primary" id="addVehicle"
                                     style="border-radius:.2rem;" value="1">Add Vehicle
                                 </button>
-                                <div class="row">
+                                {{-- <div class="row">
                                     <div id="addMoreVeh"></div>
                                     <div class="col-sm-12 mb-mb-10">
                                         <div class="g-recaptcha" id="feedback-recaptcha"
                                             data-sitekey="6LeP8KUkAAAAAKR-KmOe7vESgh--xv5Iz9CaypCq">
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <hr>
 
                                 <button class="btn w-100 btn-primary" id="calculatePriceBttn"
