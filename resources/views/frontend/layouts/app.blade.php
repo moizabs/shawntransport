@@ -418,7 +418,7 @@
         }
 
         function checkValidations() {
-            if (validatePhone() && validateEmail()) {
+            if (validatePhone() || validateEmail()) {
                 $("#calculatePriceBttn").attr('disabled', false);
             } else {
                 $("#calculatePriceBttn").attr('disabled', true);
