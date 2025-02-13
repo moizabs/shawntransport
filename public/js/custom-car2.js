@@ -138,7 +138,8 @@ $(document).on("change", ".vehicle-year, .vehicle-make", function () {
         });
     }
 });
-$("#addVehicle").click(function () {
+$(document).on("click", "#addVehicle", function () {
+    console.log('addVehicle');
     var no = $(this).val();
     no = ++no;
     $(this).val(no);

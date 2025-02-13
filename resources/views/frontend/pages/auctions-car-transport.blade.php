@@ -235,41 +235,41 @@
                                             style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                     </div>
                                     <!-- <div class="input_box">
-                                            <label>Phone#</label>
-                                            <div class="input_">
-                                                <input class="effect-8" requ="" id="phone" type="text" name="phone"
-                                                    maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
-                                                    required="" aria-required="true" />
-                                                <span class="focus-border">
-                                                    <i></i>
-                                                </span>
-                                            </div>
-                                            <script>
-                                                $(document).ready(function() {
-                                                    $("#phone").hover(function(e) {
-                                                        $.each($("#phone[type='text']"), function(i, v) {
-                                                            $(this).inputmask({
-                                                                mask: $(this).attr("mask")
+                                                <label>Phone#</label>
+                                                <div class="input_">
+                                                    <input class="effect-8" requ="" id="phone" type="text" name="phone"
+                                                        maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
+                                                        required="" aria-required="true" />
+                                                    <span class="focus-border">
+                                                        <i></i>
+                                                    </span>
+                                                </div>
+                                                <script>
+                                                    $(document).ready(function() {
+                                                        $("#phone").hover(function(e) {
+                                                            $.each($("#phone[type='text']"), function(i, v) {
+                                                                $(this).inputmask({
+                                                                    mask: $(this).attr("mask")
+                                                                });
                                                             });
                                                         });
                                                     });
-                                                });
-                                            </script>
-                                            <small class="errName"
-                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
-                                        </div>
-                                        <div class="input_box">
-                                            <label>Email</label>
-                                            <div class="input_">
-                                                <input class="effect-8" requ="" id="email" type="text" name="email"
-                                                    required="" aria-required="true" />
-                                                <span class="focus-border">
-                                                    <i></i>
-                                                </span>
+                                                </script>
+                                                <small class="errName"
+                                                    style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                             </div>
-                                            <small class="errName"
-                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
-                                        </div> -->
+                                            <div class="input_box">
+                                                <label>Email</label>
+                                                <div class="input_">
+                                                    <input class="effect-8" requ="" id="email" type="text" name="email"
+                                                        required="" aria-required="true" />
+                                                    <span class="focus-border">
+                                                        <i></i>
+                                                    </span>
+                                                </div>
+                                                <small class="errName"
+                                                    style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                            </div> -->
                                 </div>
                                 <hr />
                                 <div class="">

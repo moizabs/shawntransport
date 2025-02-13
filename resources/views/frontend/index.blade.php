@@ -317,14 +317,14 @@
                                 <button type="button" class="btn btn-primary" id="addVehicle"
                                     style="border-radius:.2rem;" value="1">Add Vehicle
                                 </button>
-                                {{-- <div class="row">
+                                <div class="row">
                                     <div id="addMoreVeh"></div>
-                                    <div class="col-sm-12 mb-mb-10">
+                                    {{-- <div class="col-sm-12 mb-mb-10">
                                         <div class="g-recaptcha" id="feedback-recaptcha"
                                             data-sitekey="6LeP8KUkAAAAAKR-KmOe7vESgh--xv5Iz9CaypCq">
                                         </div>
-                                    </div>
-                                </div> --}}
+                                    </div> --}}
+                                </div>
                                 <hr>
 
                                 <button class="btn w-100 btn-primary" id="calculatePriceBttn"

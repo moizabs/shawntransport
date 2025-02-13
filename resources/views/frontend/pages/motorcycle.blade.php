@@ -22,39 +22,27 @@
                                     <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
                                 <div class="input_box">
-                                    <label class="test">Phone#</label>
+                                    <label>Phone#</label>
                                     <div class="input_">
-                                        <input class="effect-8" id="phone" type="text" name="phone" maxlength="14"
-                                            mask="(999) 999-9999" placeholder="xxx-xxx-xxxx" required=""
-                                            aria-required="true">
+                                        <input class="effect-8 phone-num" requ="" id="phone" type="tel"
+                                            name="phone" maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
+                                            required="" aria-required="true">
                                         <span class="focus-border">
                                             <i></i>
                                         </span>
                                     </div>
-                                    <script>
-                                        $(document).ready(function() {
-                                            $("#phone").hover(function(e) {
-                                                $.each($("#phone[type='text']"), function(i, v) {
-                                                    $(this).inputmask({
-                                                        "mask": $(this).attr("mask")
-                                                    })
-                                                });
-
-                                            });
-                                        })
-                                    </script>
-                                    <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                    <small class="errPhone" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
                                 <div class="input_box">
                                     <label>Email</label>
                                     <div class="input_">
-                                        <input class="effect-8" id="email" type="text" name="email" required=""
+                                        <input class="effect-8" id="email" type="email" name="email" required=""
                                             aria-required="true">
                                         <span class="focus-border">
                                             <i></i>
                                         </span>
                                     </div>
-                                    <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                    <small class="errEmail" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
                             </div>
                             <hr />
@@ -347,11 +335,11 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 mb-mb-10">
+                                {{-- <div class="col-sm-12 mb-mb-10">
                                     <div class="g-recaptcha" id="feedback-recaptcha"
                                         data-sitekey="6LeP8KUkAAAAAKR-KmOe7vESgh--xv5Iz9CaypCq">
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <hr />
                             <div id="addMoreVeh"></div>
