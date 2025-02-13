@@ -423,10 +423,10 @@
         });
 
         $("#email").on('blur', function() {
-            if ($("#email").val().length > 0) {
+            // if ($("#email").val().length > 0) {
                 validateEmail();
                 checkValidations();
-            }
+            // }
         });
 
         $("#phone").hover(function() {
