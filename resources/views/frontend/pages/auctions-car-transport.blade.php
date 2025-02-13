@@ -195,7 +195,7 @@
                             <img src="{{ asset('webImages/offer.png') }}" />
                         </div>
                         <div class="for-car" id="forCAR">
-                            <form action="#">
+                            <form action="{{ route('submit.quote') }}">
                                 <div class="grid grid_3">
                                     <div class="input_box">
                                         <label>Full Name</label>

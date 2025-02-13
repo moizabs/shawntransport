@@ -8,7 +8,7 @@
                 <div class="quotemain__box">
                     <h3>Get Car Quotes <span>- simple, fast &amp; easy!</span></h3>
                     <div class="for-car" id="forCAR">
-                        <form action="#">
+                        <form action="{{ route('submit.quote') }}">
                             <div class="grid grid_3">
                                 <div class="input_box">
                                     <label class="test">Full Name</label>
