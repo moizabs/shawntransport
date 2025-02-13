@@ -235,74 +235,52 @@
                                             style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                     </div>
                                     <!-- <div class="input_box">
-                                                <label>Phone#</label>
-                                                <div class="input_">
-                                                    <input class="effect-8" requ="" id="phone" type="text" name="phone"
-                                                        maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
-                                                        required="" aria-required="true" />
-                                                    <span class="focus-border">
-                                                        <i></i>
-                                                    </span>
-                                                </div>
-                                                <script>
-                                                    $(document).ready(function() {
-                                                        $("#phone").hover(function(e) {
-                                                            $.each($("#phone[type='text']"), function(i, v) {
-                                                                $(this).inputmask({
-                                                                    mask: $(this).attr("mask")
+                                                    <label>Phone#</label>
+                                                    <div class="input_">
+                                                        <input class="effect-8" requ="" id="phone" type="text" name="phone"
+                                                            maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
+                                                            required="" aria-required="true" />
+                                                        <span class="focus-border">
+                                                            <i></i>
+                                                        </span>
+                                                    </div>
+                                                    <script>
+                                                        $(document).ready(function() {
+                                                            $("#phone").hover(function(e) {
+                                                                $.each($("#phone[type='text']"), function(i, v) {
+                                                                    $(this).inputmask({
+                                                                        mask: $(this).attr("mask")
+                                                                    });
                                                                 });
                                                             });
                                                         });
-                                                    });
-                                                </script>
-                                                <small class="errName"
-                                                    style="color: red; font-size: 1rem; margin-left: 3px"></small>
-                                            </div>
-                                            <div class="input_box">
-                                                <label>Email</label>
-                                                <div class="input_">
-                                                    <input class="effect-8" requ="" id="email" type="text" name="email"
-                                                        required="" aria-required="true" />
-                                                    <span class="focus-border">
-                                                        <i></i>
-                                                    </span>
+                                                    </script>
+                                                    <small class="errName"
+                                                        style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                                 </div>
-                                                <small class="errName"
-                                                    style="color: red; font-size: 1rem; margin-left: 3px"></small>
-                                            </div> -->
+                                                <div class="input_box">
+                                                    <label>Email</label>
+                                                    <div class="input_">
+                                                        <input class="effect-8" requ="" id="email" type="text" name="email"
+                                                            required="" aria-required="true" />
+                                                        <span class="focus-border">
+                                                            <i></i>
+                                                        </span>
+                                                    </div>
+                                                    <small class="errName"
+                                                        style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                                </div> -->
                                 </div>
                                 <hr />
                                 <div class="">
-                                    <script type="text/javascript"
-                                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8r7ZgkAHXuIJKgaYhhF4WccgswI-1F8&amp;v=3.exp&amp;libraries=places">
-                                    </script>
-
-                                    <script type="text/javascript">
-                                        function initialize() {
-                                            var input = document.getElementById("pick_up");
-                                            var input2 = document.getElementById("pick_up_off");
-                                            var autocomplete = new google.maps.places.Autocomplete(input);
-                                            var autocomplete2 = new google.maps.places.Autocomplete(input2);
-                                            autocomplete.addListener("place_changed", function() {
-                                                var place = autocomplete.getPlace();
-
-                                            });
-                                            autocomplete2.addListener("place_changed", function() {
-                                                var place = autocomplete.getPlace();
-
-                                            });
-                                        }
-                                        google.maps.event.addDomListener(window, "load", initialize);
-                                    </script>
                                     <div class="input_box">
                                         <label>Pickup Location</label>
-                                        <div class="input_">
-                                            <input class="effect-8" requ="" type="text" id="pick_up"
-                                                name="origin" autocomplete="off" placeholder="Ex: 90005 Or Los Angeles"
-                                                required="" aria-required="true">
-                                            <span class="focus-border">
-                                                <i></i>
-                                            </span>
+                                        <div class="input-form">
+                                            <label class="d-block"> Pickup Location:</label>
+                                            <input type="text" class="effect-8" id="pickup-location" name="origin"
+                                                placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                            <small id="errOLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
                                         </div>
                                         <small class="errName"
                                             style="color: red; font-size: 1rem; margin-left: 3px"></small>
@@ -310,13 +288,12 @@
                                 </div>
                                 <div class="input_box">
                                     <label>Delivery Location</label>
-                                    <div class="input_">
-                                        <input class="effect-8 pac-target-input" required="" type="text"
-                                            id="pick_up_off" name="destination" autocomplete="off"
-                                            placeholder="Ex: 90005 Or Los Angeles" aria-required="true">
-                                        <span class="focus-border">
-                                            <i></i>
-                                        </span>
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" class="effect-8" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
                                     </div>
                                     <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>

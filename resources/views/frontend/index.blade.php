@@ -108,14 +108,6 @@
                                     </script> --}}
                                     <div class="input_box">
                                         <label>Pickup Location</label>
-                                        {{-- <div class="input_">
-                                            <input class="effect-8" requ="" type="text" id="pick_up"
-                                                name="origin" autocomplete="off" placeholder="Ex: 90005 Or Los Angeles"
-                                                required="" aria-required="true">
-                                            <span class="focus-border">
-                                                <i></i>
-                                            </span>
-                                        </div> --}}
                                         <div class="input-form">
                                             <label class="d-block"> Pickup Location:</label>
                                             <input type="text" class="effect-8" id="pickup-location" name="origin"
@@ -129,14 +121,6 @@
                                 </div>
                                 <div class="input_box">
                                     <label>Delivery Location</label>
-                                    {{-- <div class="input_">
-                                        <input class="effect-8 pac-target-input" required="" type="text"
-                                            id="pick_up_off" name="destination" autocomplete="off"
-                                            placeholder="Ex: 90005 Or Los Angeles" aria-required="true">
-                                        <span class="focus-border">
-                                            <i></i>
-                                        </span>
-                                    </div> --}}
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Location:</label>
                                         <input type="text" class="effect-8" id="delivery-location" name="destination"
