@@ -331,13 +331,13 @@
                             <img src="{{ asset('webImages/car.png') }}" alt="">
                             <h3>CAR</h3>
                             <p>Sedan, SUV, Pickup etc.</p>
-                            <a href="car.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('car') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                         <li class="services__item">
                             <img src="{{ asset('webImages/motorcycle.png') }}" alt="">
                             <h3>MOTORCYCLE</h3>
                             <p>Mopeds, ATV, Power Sports etc.</p>
-                            <a href="motorcycle.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('motorcycle') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                     </ul>
                     <ul class="list services grid grid_3">
@@ -345,19 +345,19 @@
                             <img src="{{ asset('webImages/heavy.png') }}" alt="">
                             <h3>HEAVY EQUIP.</h3>
                             <p>Trucks, Bulldozers, Mixer etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('heavy') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                         <li class="services__item">
                             <img src="{{ asset('webImages/roro.png') }}" alt="">
                             <h3>RORO</h3>
                             <p>Cars, Trucks, trailers etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('car') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                         <li class="services__item">
                             <img src="{{ asset('webImages/atv.png') }}" alt="">
                             <h3>ATV/UTV</h3>
                             <p>Sport, Quads, Military etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('atv.utv') }}" class="btn btn-primary">GET QUOTE</a>
 
                         </li>
                     </ul>
@@ -366,7 +366,7 @@
                             <img src="{{ asset('webImages/construction.png') }}" alt="">
                             <h3>CONSTRUCTION</h3>
                             <p>Cranes, Drills, Grinders etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('car') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                         <li class="services__item">
                             <img src="{{ asset('webImages/farm.png') }}" alt="">
