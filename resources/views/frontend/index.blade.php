@@ -107,7 +107,6 @@
                                         google.maps.event.addDomListener(window, "load", initialize);
                                     </script> --}}
                                     <div class="input_box">
-                                        <label>Pickup Location</label>
                                         <div class="input-form">
                                             <label class="d-block"> Pickup Location:</label>
                                             <input type="text" class="effect-8" id="pickup-location" name="origin"
@@ -120,7 +119,6 @@
                                     </div>
                                 </div>
                                 <div class="input_box">
-                                    <label>Delivery Location</label>
                                     <div class="input-form">
                                         <label class="d-block"> Delivery Location:</label>
                                         <input type="text" class="effect-8" id="delivery-location" name="destination"
@@ -372,19 +370,19 @@
                             <img src="{{ asset('webImages/farm.png') }}" alt="">
                             <h3>FARM</h3>
                             <p>Tractor, Planter, Baler etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('heavy') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                         <li class="services__item">
                             <img src="{{ asset('webImages/excavator.png') }}" alt="">
                             <h3>EXCAVATOR</h3>
                             <p>Digger, Driller, Miners etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('heavy') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                         <li class="services__item">
                             <img src="{{ asset('webImages/truck.png') }}" alt="">
                             <h3>TRUCKS</h3>
                             <p>Commercial, Dump Trucks etc.</p>
-                            <a href="heavy.html" class="btn btn-primary">GET QUOTE</a>
+                            <a href="{{ route('heavy') }}" class="btn btn-primary">GET QUOTE</a>
                         </li>
                     </ul>
                 </div>
@@ -408,7 +406,7 @@
                             Open, enclosed, and fast shipping. Shawn Transport’s dominance values quality,
                             affordability, and safety. Get an online quote and the comfort of knowing your vehicle is
                             safe, no matter the season or wherever you are going.</p>
-                        <a href="car-shipping-service.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('car.shipping.service') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -421,7 +419,7 @@
                             and a team of expert carriers at your service. Select open or enclosed with live tracking.
                             Instant shipping price calculation, using your bike details on the internet. Need help? Our
                             helpful freight brokers are there for your queries all the time.</p>
-                        <a href="motorcycle-shipping-service.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('motorcycle.shipping.service') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -434,7 +432,7 @@
                             We ship at a flat rate, without hiccups with 100% nationwide reviews. Wash your ATV, check
                             for scratches, and report mechanical condition before shipping to make it safe to transport.
                             Shawn Transport is here for you to have an on-time, safe delivery.</p>
-                        <a href="atv-utv-transport.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('atv.utv') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -447,7 +445,7 @@
                             weight and dimensions decide your best shipping company. We have the best technology for
                             reliable and affordable transportation. Get the best price and a top-notch service where you
                             can be sure your equipment will arrive safely and on time. Shawn Transport is your spot!</p>
-                        <a href="construction-equipment-transport-shipping.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('construction.equipment.transport.shipping') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -460,7 +458,7 @@
                             at highly competitive rates. Our expert drivers get your cargo delivered safely and on time.
                             Verify your equipment with precise details. You can get a quote via the web, and our agents
                             will take care of the whole process.</p>
-                        <a href="farm-transport-services.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('farm.transport.services') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -474,7 +472,7 @@
                             can also get you cost estimates. Look to Shawn Transport for personalized and efficient
                             service with competitive rates. Contact us anytime for shipping consulting assistance or
                             quotes.</p>
-                        <a href="excavator-shipping-services.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('excavator.shipping.services') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -487,7 +485,7 @@
                             instant quotes using our shipping calculator. We've partnered with trusted carriers for
                             lightning and stress-free delivery. Costs depend on the distance, weight, and shipping
                             season. Let Shawn Transport offer you the best offers in each freight season.</p>
-                        <a href="commercial-truck-transport.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('commercial.truck.transport') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
                 <div class="media">
@@ -501,7 +499,7 @@
                             qualified staff guarantees your on-time, shipment, and high-tech security anywhere in the
                             nation.
                             Let us handle your shipping needs with professional care.</p>
-                        <a href="heavy-equipment-shipping-services.html" class="btn btn-primary">READ MORE</a>
+                        <a href="{{ route('heavy.equipment.shipping.services') }}" class="btn btn-primary">READ MORE</a>
                     </div>
                 </div>
             </div>

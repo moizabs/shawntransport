@@ -85,7 +85,6 @@
                             <hr />
                             <div class="">
                                 <div class="input_box">
-                                    <label>Pickup Location</label>
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Location:</label>
                                         <input type="text" class="effect-8" id="pickup-location" name="origin"
@@ -98,7 +97,6 @@
                             </div>
 
                             <div class="input_box">
-                                <label>Delivery Location</label>
                                 <div class="input-form">
                                     <label class="d-block"> Delivery Location:</label>
                                     <input type="text" class="effect-8" id="delivery-location" name="destination"
