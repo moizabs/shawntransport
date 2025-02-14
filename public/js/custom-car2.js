@@ -295,11 +295,9 @@ $(document).on("click", "#addHeavy", function () {
 
     $("#addMoreVeh").append(`
         <div id="field${no}">
-            <input type="hidden" name="count[]" value="${no}">
+            <input type="hidden" id="countNo" name="count[]" value="${no}">
             <div class="px-4">
-                <span class="delete-vehicle">
-                    <i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;" onclick="removeField(${no})"></i>
-                </span>
+                <span class="delete-heavy"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;" onclick="removeField(${no})"></i></span>
             </div>
             <div class="grid grid_3">
                 <div class="input_box" style="grid-column: 2 span;">
@@ -395,6 +393,7 @@ $(document).on("click", "#addHeavy", function () {
 
     // Event Listener for Checkbox
     $(`#vehicle-condition${no}`).click(function () {
+        console.log('oaskdokasd');
         if ($(this).prop("checked")) {
             $(`#vcond${no}`).html("Running");
             $(`input[name="veh-condition[${no}]"]`).val("operable");
@@ -409,6 +408,11 @@ $(document).on("click", "#addHeavy", function () {
 function removeField(no) {
     $(`#field${no}`).remove();
 }
+
+$(document).on("click", ".delete-heavy", function () {
+    $(this).closest("div[id^='field']").remove();  
+    // $(`#field${no}`).remove();
+});
 
 // });
 
