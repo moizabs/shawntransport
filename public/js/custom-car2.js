@@ -285,6 +285,131 @@ $(document).on("click", "#addVehicle", function () {
         }
     });
 });
+$(document).on("click", "#addHeavy", function () {
+    var no = $(this).data("count") || 0;  // Use data attribute to store count
+    no++;
+    $(this).data("count", no);
+
+    var years = getYear(); 
+    years = years.split("</option><option>");
+
+    $("#addMoreVeh").append(`
+        <div id="field${no}">
+            <input type="hidden" name="count[]" value="${no}">
+            <div class="px-4">
+                <span class="delete-vehicle">
+                    <i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;" onclick="removeField(${no})"></i>
+                </span>
+            </div>
+            <div class="grid grid_3">
+                <div class="input_box" style="grid-column: 2 span;">
+                    <label>Year, Make & Model</label>
+                    <div class="input_">
+                        <input class="effect-8" required type="text" name="destination[]"
+                            autocomplete="off" placeholder="Enter Equipment Year, Make & Model">
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Trailer Type</label>
+                    <div class="input_">
+                        <select class="effect-8" id="trailer_type${no}" required>
+                            <option value="0" selected disabled>Select</option>
+                            <option value="Step_Deck">Step Deck</option>
+                            <option value="RGN">RGN</option>
+                            <option value="Flatbed">Flatbed</option>
+                            <option value="Landoll">Landoll</option>
+                            <option value="Hotshot">Hotshot</option>
+                        </select>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid_3">
+                <div class="input_box">
+                    <label>Length</label>
+                    <div class="input_">
+                        <input class="effect-8" type="text" name="lengthft[]" id="length${no}" required>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Width</label>
+                    <div class="input_">
+                        <input class="effect-8" type="text" name="widthft[]" id="width${no}" required>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Height</label>
+                    <div class="input_">
+                        <input class="effect-8" type="text" name="heightft[]" id="height${no}" required>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Weight</label>
+                    <div class="input_">
+                        <input class="effect-8" type="text" name="weight[]" id="weight${no}" required>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Load Method</label>
+                    <div class="input_">
+                        <select class="effect-8" name="load_method[]" id="load_method${no}" required>
+                            <option value="0" selected disabled>Select</option>
+                            <option>loading_dock</option>
+                            <option>crane</option>
+                            <option>forklift</option>
+                            <option>drive_roll</option>
+                        </select>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Unload Method</label>
+                    <div class="input_">
+                        <select class="effect-8" name="unload_method[]" id="unload_method${no}" required>
+                            <option value="0" selected disabled>Select</option>
+                            <option>loading_dock</option>
+                            <option>crane</option>
+                            <option>forklift</option>
+                            <option>drive_roll</option>
+                        </select>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:8px; margin-bottom: 8px;">
+                <div class="col-md-6">
+                    <label class="checkbox-inline">
+                        <input type="hidden" name="veh-condition[${no}]" value="1">
+                        <input type="checkbox" name="veh-condition[${no}]" id="vehicle-condition${no}" class="checkbox-custom" value="1" checked>
+                        <span class="checkbox-custom-dummy"></span> <span id="vcond${no}">Running</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    `);
+
+    // Event Listener for Checkbox
+    $(`#vehicle-condition${no}`).click(function () {
+        if ($(this).prop("checked")) {
+            $(`#vcond${no}`).html("Running");
+            $(`input[name="veh-condition[${no}]"]`).val("operable");
+        } else {
+            $(`#vcond${no}`).html("Non-Running");
+            $(`input[name="veh-condition[${no}]"]`).val("non-running");
+        }
+    });
+});
+
+// Function to Remove Field
+function removeField(no) {
+    $(`#field${no}`).remove();
+}
+
 // });
 
 $("#carrier-type").click(function () {

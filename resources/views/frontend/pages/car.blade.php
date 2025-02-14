@@ -251,13 +251,13 @@
                             <div class="clearfix"></div>
                             <hr />
                             <div id="addMoreVeh"></div>
-                            <div class="row" style="margin-top:8px; margin-bottom: 8px;">
+                            {{-- <div class="row" style="margin-top:8px; margin-bottom: 8px;">
                                 <div class="col-sm-12 mb-mb-10">
                                     <div class="g-recaptcha" id="feedback-recaptcha"
                                         data-sitekey="6LeP8KUkAAAAAKR-KmOe7vESgh--xv5Iz9CaypCq">
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <button class="btn w-100 btn-primary" id="calculatePriceBttn" style="border-radius: .3rem;"
                                 type="submit">Calculate Price
                             </button>

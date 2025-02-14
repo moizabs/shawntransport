@@ -191,7 +191,7 @@
                                     <label>Load Method</label>
                                     <div class="input_">
                                         <select class="effect-8" data-placeholder="Load Method"
-                                            data-minimum-results-for-search="5" name="load[]" id="load_method"
+                                            data-minimum-results-for-search="5" name="load_method[]" id="load_method"
                                             required="" aria-required="true" data-select2-id="load_method"
                                             tabindex="-1" aria-hidden="true">
                                             <option value="0" selected="" disabled="" data-select2-id="4">
@@ -211,7 +211,7 @@
                                     <label>Unload Method</label>
                                     <div class="input_">
                                         <select class="effect-8" data-placeholder="Unload Method"
-                                            data-minimum-results-for-search="5" name="unload[]" id="unload_method"
+                                            data-minimum-results-for-search="5" name="unload_method[]" id="unload_method"
                                             required="" aria-required="true" data-select2-id="unload_method"
                                             tabindex="-1" aria-hidden="true">
                                             <option value="0" selected="" disabled="" data-select2-id="6">
@@ -228,7 +228,7 @@
                                     <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" id="addVehicle" style="border-radius:.2rem;"
+                            <button type="button" class="btn btn-primary" id="addHeavy" style="border-radius:.2rem;"
                                 value="1">Add Equipment
                             </button>
                             <div class="clearfix"></div>
@@ -258,11 +258,11 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 mb-mb-10">
+                                {{-- <div class="col-sm-12 mb-mb-10">
                                     <div class="g-recaptcha" id="feedback-recaptcha"
                                         data-sitekey="6LeP8KUkAAAAAKR-KmOe7vESgh--xv5Iz9CaypCq">
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <hr />
                             <div id="addMoreVeh"></div>
