@@ -187,7 +187,7 @@
         <div class="row" style="olid #ebe8e8;box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;-webkit-box-shadow: 0px 0px 51px -5px rgb(233 236 239) inset;-moz-box-shadow: 0px 0px 51px -5px rgba(0,0,0,1) inset;border-radius: 25px;padding: 35px;">
             <div class="col-12 mb-4">
                 <i class="fas fa-thumbs-up fa-5x mb-4" style="color: #1a96e4; animation: bounce 2s infinite;"></i>
-                <h2 class="thank-you-title">Thank You!</h2>
+                <h2 class="thank-you-title">Thumb You!</h2>
                 @if (isset($price))
                     <h2 class="thank-you-title">{{ $price }}</h2>
                 @endif
