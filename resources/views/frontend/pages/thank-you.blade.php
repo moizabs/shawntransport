@@ -233,7 +233,7 @@
         </div> 
     </div>
 </section>
-<section class="tj-faq-section tj-faq-page pt-5">
+{{-- <section class="tj-faq-section tj-faq-page pt-5">
     <div class="container ">
         <div class="row shadow-lg p-3 mb-1 bg-body rounded-pill">
             <div class="col-lg-12">
@@ -856,5 +856,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @endsection
