@@ -195,7 +195,10 @@
                             <img src="{{ asset('webImages/offer.png') }}" />
                         </div>
                         <div class="for-car" id="forCAR">
-                            <form action="{{ route('submit.quote') }}">
+                            <form action="{{ route('submit.quote') }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                                <input type="hidden" name="car_type" value="1" hidden>
                                 <div class="grid grid_3">
                                     <div class="input_box">
                                         <label>Full Name</label>

@@ -11,7 +11,10 @@
                 <div class="quotemain__box">
                     <h3>Get Car Quotes <span>- simple, fast &amp; easy!</span></h3>
                     <div class="for-car" id="forCAR">
-                        <form action="{{ route('submit.quote') }}">
+                        <form action="{{ route('submit.quote') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                            <input type="hidden" name="car_type" value="1" hidden>
                             <div class="grid grid_3">
                                 <div class="input_box">
                                     <label class="test">Full Name</label>
@@ -77,7 +80,6 @@
                             </div>
                             <div class="grid grid_3">
                                 <div class="input_box">
-                                    <label>Year</label>
                                     <div class="input_box">
                                         <label>Year</label>
                                         <div class="input_">
