@@ -156,7 +156,7 @@ $("#addVehicle").click(function() {
                 <div class="input_box">
                     <label>Year</label>
                     <div class="input_">
-                        <select class="effect-8 vehicle-year" required>
+                        <select class="effect-8 vehicle-year" name="year[]" required>
                             <option value="" selected disabled>Year</option>
                             ${years}
                         </select>
@@ -166,7 +166,7 @@ $("#addVehicle").click(function() {
                 <div class="input_box">
                     <label>Make</label>
                     <div class="input_">
-                        <select class="effect-8 vehicle-make" required>
+                        <select class="effect-8 vehicle-make" name="make[]" required>
                             <option value="0" selected="" disabled="" data-select2-id="4">Make</option>
                             <option value="Acura">Acura</option>
                             <option value="Alfa Romeo">Alfa Romeo</option>
@@ -257,21 +257,40 @@ $("#addVehicle").click(function() {
                     <label>Model</label>
                     <div class="input_">
                         <input type="text" class="effect-8 vehicle-model-input" placeholder="Model">
-                        <ul class="dropdown-menu vehicle-model-dropdown"></ul>
-                        <select class="vehicle-model-select" style="display:none;">
+                        <ul class="dropdown-menu vehicle-model-dropdown w-100"></ul>
+                        <select class="vehicle-model-select" name="model[]" style="display:none;">
                             <option value="">Select Model</option>
                         </select>
                         <span class="focus-border"><i></i></span>
                     </div>
+                </div></div>
+                <div class="grid grid_2 px-4" style="padding: 15px 0px;">
+                <div class="" style="margin:1rem 0;">
+                    <label for="condition">Condition</label>
+                    <div class="input_box">
+                        <select class="effect-8 lh-base" id="condition" name="condition[]">
+                            <option value="1" selected>Running</option>
+                            <option value="2">Non Running</option>
+                        </select>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="flex_ flex_space" style="margin:1rem 0;">
-                    <label class="checkbox-inline">
-                        <input type="hidden" value="1" name="veh-condition[${no}]">
-                        <input type="checkbox" checked="" name="veh-condition[${no}]" id="vehicle-condition${no}"
-                            class="checkbox-custom" value="1">
-                        <span class="checkbox-custom-dummy"></span>
-                        <span id="vcond${no}">Running</span>
-                    </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="available_at_auction"
+                        name="available_at_auction" value="1" />
+                    <label class="form-check-label test" for="" style="margin: -2px 0px 0px 0px;padding: 0px 0px 0px 6px;"> Available
+                        at Auction?</label>
+                    <div class="input-form div-link mt-3 input_box" style="display: none;">
+                        <div class="input_">
+                        <input class="test effect-8 requriedfield" type="url" id="link-1" name="link"
+                            placeholder="Enter Link" />
+                            <span class="focus-border">
+                            <i></i>
+                        </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,13 @@
 @extends('frontend.layouts.app')
-
+<style>
+    .container-m {
+        width: 80%;
+        margin: auto;
+    }
+</style>
 @section('content')
-    <section class="banner relative" style="max-height:30rem; min-height:30rem; background: url('webImages/banners/2.jpg');">
+    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+    background: url('webImages/banners/2.jpg')no-repeat center center;">
         <ul class="list">
             <li>
                 <div class="banner__Txt">
@@ -11,11 +17,33 @@
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding">
-            <div class="block__inner grid">
-                <div class="innerServices__left">
-                    <img src="webImages/services/Equipment-Hauling-scaled.jpeg" alt="">
+    {{-- <main class="main"> --}}
+        <div class="container-m innerServices__left">
+            <div class="row">
+                {{-- <div class=""> --}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 my-5 ">
+                        <img src="webImages/services/Equipment-Hauling-scaled.jpeg" style="width: 100%" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-none d-md-block">
+                        <img src="webImages/sidebar-quote-promo.gif" alt="">
+                        <div class="blog-contact">
+                            <h3 class="">Contact Us</h3>
+                            <ul class="list">
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>Call Us : <strong>1-844-474-4721</strong></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email : <a href="mailto:quote@shawntransport.com">quote@shawntransport.com</a></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Sat - Thu: 8AM - 7PM </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <h4>Heavy Equipment Shipping Services</h4>
                     <p>Oversized and heavy equipment can have logistical and managerial challenges if you’re unfamiliar with
                         the transportation procedure or the way <a href="#">heavy equipment shipping</a> is done. So
@@ -51,18 +79,18 @@
                         trailers and tools that are necessary for the heavy equipment shipping; therefore there is no point
                         of not trusting Shawn Transport. </p>
                     <br>
-                    <div class="grid grid_3" style="gap: 2rem;">
-                        <div class="card">
+                    {{-- <div class="grid grid_3" style="gap: 2rem;"> --}}
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Frequent Delivery</h2>
                             <p>Heavy equipment Shipping is often needed to shift it from one site to another that’s is why
                                 we have special focus on frequent movement of heavy equipment.</p>
                         </div>
-                        <div class="card">
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Insurance Coverage</h2>
                             <p>One of the most important aspect while shipping heavy equipment is the risk of damage which
                                 is protected with complete Insurance coverage.</p>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                     <br>
                     <h4>Ins & Outs of Heavy Equipment</h4>
                     <ul class="click_style">
@@ -107,8 +135,8 @@
                     <br>
                     <br>
 
-                </div>
-                <div class="innerServices__right">
+                {{-- </div> --}}
+                <div class="col-lg-8 col-md-8 col-sm-12 my-5 d-block d-md-none">
                     <img src="webImages/sidebar-quote-promo.gif" alt="">
                     <div class="blog-contact">
                         <h3 class="">Contact Us</h3>
@@ -131,5 +159,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection

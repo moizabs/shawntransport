@@ -1,21 +1,51 @@
 @extends('frontend.layouts.app')
 
+<style>
+    .container-m {
+        width: 80%;
+        margin: auto;
+    }
+</style>
 @section('content')
-    <section class="banner relative" style="max-height:30rem; min-height:30rem; background: url('webImages/banners/2.jpg');">
+    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+    background: url('webImages/banners/2.jpg')no-repeat center center;">
         <ul class="list">
             <li>
                 <div class="banner__Txt">
-                    <h2>Car Transport Service</h2>
+                    <h1>Car Transport Service</h1>
 
                 </div>
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding">
-            <div class="block__inner grid">
-                <div class="innerServices__left">
-                    <img src="webImages/services/car.jpeg" alt="">
+    {{-- <main class="main"> --}}
+        <div class="container-m innerServices__left">
+            <div class="row">
+                {{-- <div class=""> --}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 my-5">
+                        <img src="webImages/services/car.jpeg" style="width: 100%;"  alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-none d-md-block">
+                        <img src="webImages/sidebar-quote-promo.gif" style="width: 100%;" alt="">
+                        <div class="blog-contact">
+                            <h3 class="">Contact Us</h3>
+                            <ul class="list">
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>Call Us : <strong>1-844-474-4721</strong></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email : <a href="mailto:quote@shawntransport.com">quote@shawntransport.com</a></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Sat - Thu: 8AM - 7PM </span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </div>
                     <h4>Delayed Car Shipping &amp; High Prices? Solution - Shawn Transport</h4>
                     <p>
                         US natives have become tired of physical car shipping consignment booking. Because there is waiting,
@@ -34,17 +64,17 @@
                         nationwide and global success. At our platform, there are no shipping sorrows, just trust Shawn
                         Transport!</p>
                     <br>
-                    <div class="grid grid_3" style="gap: 2rem;">
-                        <div class="card">
+                    {{-- <div class="grid grid_3" style="gap: 2rem;"> --}}
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4 ">
                             <h2>Easy Booking</h2>
                             <p>Online quote submission, pricing calculation, short booking form, and payment transaction.
                             </p>
                         </div>
-                        <div class="card">
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Swift Transport</h2>
                             <p>Our advanced trucks with expert tracking and fast route selection make transport easy</p>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                     <br>
                     <h4>Car Hauling Services</h4>
                     <ul class="click_style">
@@ -89,8 +119,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="innerServices__right">
-                    <img src="webImages/sidebar-quote-promo.gif" alt="">
+
+                <div class="col-12 my-5 d-block d-md-none">
+                    <img src="webImages/sidebar-quote-promo.gif" style="width: 100%;" alt="">
                     <div class="blog-contact">
                         <h3 class="">Contact Us</h3>
                         <ul class="list">
@@ -110,7 +141,8 @@
                     </div>
 
                 </div>
+                
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection

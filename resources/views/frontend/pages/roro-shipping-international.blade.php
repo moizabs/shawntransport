@@ -1,8 +1,43 @@
 @extends('frontend.layouts.app')
 
+<style>
+    .grid-list {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* 2 columns */
+        gap: 10px;
+        /* optional: adds space between items */
+    }
+
+    .grid-list li {
+        /* background: lightgray; */
+        /* padding: 10px;
+    text-align: center; */
+    }
+
+    @media(max-width:880px) {
+        .grid-list {
+            grid-template-columns: auto auto auto;
+        }
+
+    }
+
+    @media(max-width:780px) {
+        .grid-list {
+            grid-template-columns: auto auto ;
+        }
+    }
+
+    @media(max-width:570px) {
+        .grid-list {
+            grid-template-columns: auto ;
+        }
+    }
+</style>
 @section('content')
     <section class="banner relative"
-        style="max-height:30rem; min-height:30rem; background: url('webImages/services/Header.jpg')no-repeat center center; background-size: cover;">
+        style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+        background: url('webImages/services/Header.jpg')no-repeat center center; background-size: cover;">
         <ul class="list">
             <li>
                 <div class="banner__Txt">
@@ -29,7 +64,7 @@
                         paperwork, and legalities process without any stop. Get a R0R0 shipping quote today!</p>
                     <br>
                 </div>
-                <ul class="list grid grid_4 cardm" style="gap:2rem;">
+                <ul class="list grid cardm grid-list" style="gap:2rem;">
                     <li>
                         <b>Nigeria</b>
                         <div><span>City : </span><b>Lagos</b></div>
@@ -47,9 +82,9 @@
                         <b>Senegal</b>
                         <div><span>City : </span><b>Dakar</b></div>
                     </li>
-                </ul>
-                <hr>
-                <ul class="list grid grid_4 cardm" style="gap:2rem;">
+                    {{-- </ul> --}}
+                    {{-- <hr> --}}
+                    {{-- <ul class="list grid grid_4 cardm" style="gap:2rem;"> --}}
                     <li>
                         <b>Ivory coast</b>
                         <div><span>City : </span><b>Abidjan</b></div>
@@ -66,9 +101,9 @@
                         <b>Benin</b>
                         <div><span>City : </span><b>Cotonou</b></div>
                     </li>
-                </ul>
+                    {{-- </ul>
                 <hr>
-                <ul class="list grid grid_4 cardm" style="gap:2rem;">
+                <ul class="list grid grid_4 cardm" style="gap:2rem;"> --}}
                     <li>
                         <b>Cameroon</b>
                         <div><span>City : </span><b>Douala</b></div>
@@ -101,7 +136,7 @@
                     you. Well, it’s not just the limited benefits but a bunch of advantages waiting for you to submit a
                     fulfilling quote. </p>
 
-                <img src="https://www.shawntransport.com//img/roro_3.jpg" alt="">
+                {{-- <img src="https://www.shawntransport.com//img/roro_3.jpg" alt=""> --}}
                 <br>
                 <ul class="click_style">
                     <li>

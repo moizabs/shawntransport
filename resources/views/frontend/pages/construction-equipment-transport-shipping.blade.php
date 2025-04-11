@@ -1,7 +1,13 @@
 @extends('frontend.layouts.app')
-
+<style>
+    .container-m {
+        width: 80%;
+        margin: auto;
+    }
+</style>
 @section('content')
-    <section class="banner relative" style="max-height:30rem; min-height:30rem; background: url('webImages/banners/2.jpg');">
+    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+    background: url('webImages/banners/2.jpg')no-repeat center center;">
         <ul class="list">
             <li>
                 <div class="banner__Txt">
@@ -11,11 +17,33 @@
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding">
-            <div class="block__inner grid">
-                <div class="innerServices__left">
-                    <img src="webImages/services/Transporting-Heavy-Equipment.jpg" alt="">
+    {{-- <main class="main"> --}}
+        <div class="container-m innerServices__left">
+            <div class="row">
+                {{-- <div class="innerServices__left"> --}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 my-5">
+                        <img src="webImages/services/Transporting-Heavy-Equipment.jpg" style="width: 100%;" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-none d-md-block">
+                        <img src="webImages/sidebar-quote-promo.gif" style="width: 100%;" alt="">
+                        <div class="blog-contact">
+                            <h3 class="">Contact Us</h3>
+                            <ul class="list">
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>Call Us : <strong>1-844-474-4721</strong></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email : <a href="mailto:quote@shawntransport.com">quote@shawntransport.com</a></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Sat - Thu: 8AM - 7PM </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <h4>Construction Equipment Transport</h4>
                     <p>Heavy equipment shipping and construction work must start at the earliest. Just like shippers and
                         brokers don’t want to waste their time on unwanted delays. Similarly, builders don’t like to have
@@ -30,18 +58,18 @@
                         Shawn Transport and get the freight delivery services for international roll-on/roll-off.
                     </p>
                     <br>
-                    <div class="grid grid_3" style="gap: 2rem;">
-                        <div class="card">
+                    {{-- <div class="grid grid_3" style="gap: 2rem;"> --}}
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Easy Booking</h2>
                             <p>Online quote is the best way of shipping booking. Go for your construction equipment
                                 transport today!</p>
                         </div>
-                        <div class="card">
+                        <div class="ard col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Swift Transport</h2>
                             <p>Live nearby Florida? no problem. Want your equipment transported to remote locations? Call
                                 for our experts.</p>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                     <br>
                     <h4>Factors That Determine The Price</h4>
                     <ul class="click_style">
@@ -82,11 +110,11 @@
                             <p>Tractors and Concrete mixers.</p>
                         </li>
                     </ul>
-                    <a href="heavy.html"><img src="https://www.shawntransport.com/assets/images/banner-8-800x480.jpg"
-                            alt=""></a>
-                </div>
-                <div class="innerServices__right">
-                    <img src="webImages/sidebar-quote-promo.gif" alt="">
+                    {{-- <a href="heavy.html"><img src="https://www.shawntransport.com/assets/images/banner-8-800x480.jpg"
+                            alt=""></a> --}}
+                {{-- </div> --}}
+                <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-block d-md-none">
+                    <img src="webImages/sidebar-quote-promo.gif" style="width: 100%;" alt="">
                     <div class="blog-contact">
                         <h3 class="">Contact Us</h3>
                         <ul class="list">
@@ -108,5 +136,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection

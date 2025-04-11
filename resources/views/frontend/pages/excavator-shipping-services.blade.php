@@ -1,7 +1,13 @@
 @extends('frontend.layouts.app')
-
+<style>
+    .container-m {
+        width: 80%;
+        margin: auto;
+    }
+</style>
 @section('content')
-    <section class="banner relative" style="max-height:30rem; min-height:30rem; background: url('webImages/banners/2.jpg');">
+    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+    background: url('webImages/banners/2.jpg')no-repeat center center;">
         <ul class="list">
             <li>
                 <div class="banner__Txt">
@@ -11,11 +17,34 @@
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding">
-            <div class="block__inner grid">
-                <div class="innerServices__left">
-                    <img src="webImages/services/excavator-shipping-1.jpg" alt="">
+    {{-- <main class="main"> --}}
+        <div class="container-m innerServices__left">
+            <div class="row">
+                {{-- <div class=""> --}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 my-5 ">
+                        <img src="webImages/services/excavator-shipping-1.jpg" style="width: 100%;" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-none d-md-block">
+                        <img src="webImages/sidebar-quote-promo.gif" alt="">
+                        <div class="blog-contact">
+                            <h3 class="">Contact Us</h3>
+                            <ul class="list">
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>Call Us : <strong>1-844-474-4721</strong></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email : <a href="mailto:quote@shawntransport.com">quote@shawntransport.com</a></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Sat - Thu: 8AM - 7PM </span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </div>
                     <h4>Need Excavator Shipping Service Now. What to Do?</h4>
                     <p>Do nothing, just reach out to us. Shawn Transport is the element of trust between industry-expert
                         carriers
@@ -34,18 +63,18 @@
                         pickup and
                         speedy delivery.</p>
                     <br>
-                    <div class="grid grid_3" style="gap: 2rem;">
-                        <div class="card">
+                    {{-- <div class="grid grid_3" style="gap: 2rem;"> --}}
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Protected Shipment</h2>
                             <p>Whenever we are shipping a heavy equipment our ultimate focus must be on choosing the right
                                 trailer for a safer experience during transit & at time of delivery.</p>
                         </div>
-                        <div class="card">
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Trailer for Excavator</h2>
                             <p>Not every trailer that can be used in shipping an excavator. Mostly a lowboy trailer is used
                                 while others are used as per the dimensions of the excavator.</p>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                     <br>
                     <h4>Things You Should Expect</h4>
                     <ul class="click_style">
@@ -85,8 +114,8 @@
                             <p>It’s Weight.</p>
                         </li>
                     </ul>
-                </div>
-                <div class="innerServices__right">
+                {{-- </div> --}}
+                <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-block d-md-none">
                     <img src="webImages/sidebar-quote-promo.gif" alt="">
                     <div class="blog-contact">
                         <h3 class="">Contact Us</h3>
@@ -109,5 +138,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection

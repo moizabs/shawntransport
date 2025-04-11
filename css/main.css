@@ -25,7 +25,7 @@ body {
     margin: 0;
 }
 
-h1,
+/* h1, */
 h2,
 h3,
 h4,
@@ -42,9 +42,9 @@ h6 {
         <div class="h/folders/1-qzMBIZUwDT2-2pF7nuPx6bbMI0DRrGN?usp=sharing"></div>
         <div class="h/folders/1-qzMBIZUwDT2-2pF7nuPx6bbMI0DRrGN?usp=sharing"></div>
     </div>*/
-h1 {
+/* h1 {
     font-size: 5rem;
-}
+} */
 
 h2 {
     font-size: 4rem;
@@ -105,7 +105,7 @@ img {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: #8fc743;
+    background: #1a96e4;
     border: 0.2rem solid #fff;
     display: -ms-grid;
     display: grid;
@@ -175,7 +175,7 @@ img {
 .socialIcon a:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    background: #8fc743;
+    background: #1a96e4;
 }
 
 .click_style {
@@ -325,17 +325,23 @@ img {
 }
 
 .grid_2 {
-    -ms-grid-columns: (1fr) [2];
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* Mobile screens: change to 1 column */
+@media (max-width: 600px) {
+    .grid_2 {
+        grid-template-columns: auto ;
+          background-color: orange !important;
+    }
 }
 
 .grid_3 {
-    -ms-grid-columns: (1fr) [3];
     grid-template-columns: repeat(3, 1fr);
 }
 
 .grid_4 {
-    -ms-grid-columns: (1fr) [4];
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -797,7 +803,8 @@ form .grid {
     height: 0;
     -webkit-transition: height 0.3s ease-in-out;
     transition: height 0.3s ease-in-out;
-    background: #8fc743;
+    /*background: #1a96e4;*/
+    background: linear-gradient(220deg, #2bdadc, #0067f4);
     z-index: 1;
 }
 
@@ -1327,7 +1334,8 @@ form .grid {
     position: relative;
     width: 4rem;
     height: 4rem;
-    background: #1a96e4;
+    /*background: #1a96e4;*/
+    background: linear-gradient(359deg, #2bdadc, #0067f4);
     display: -ms-grid;
     display: grid;
     place-items: center;
@@ -1689,7 +1697,7 @@ form .grid {
 .footer_menu ul li a {
     position: relative;
     display: block;
-    color: #8fc743;
+    color: #1a96e4;
     font-size: 15px;
     margin-right: 33px;
     padding: 10px 0px;
@@ -1745,7 +1753,7 @@ form .grid {
 }
 
 .footer_menus li a:hover {
-    color: #8fc743;
+    color: #1a96e4;
 }
 
 .footer_m {
@@ -1820,7 +1828,7 @@ form .grid {
 }
 
 .footer_con ul li:hover a {
-    color: #8fc743;
+    color: #1a96e4;
 }
 
 .footer_bottom {
@@ -1848,7 +1856,7 @@ form .grid {
 }
 
 .footer_bottom_ h3 a:hover {
-    color: #8fc743;
+    color: #1a96e4;
 }
 
 .footer_bottom_txt a,
@@ -1893,7 +1901,7 @@ form .grid {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: #8fc743;
+    background: #1a96e4;
     border: 0.2rem solid #fff;
     display: -ms-grid;
     display: grid;
@@ -2163,15 +2171,17 @@ form .grid {
 }
 
 .quotemain .block__inner > h2 {
-    color: #009dd9;
+    color: #000000;
     margin-bottom: 2rem;
     font-size: 3rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .quotemain__box {
+    background: #ffffffe8;
     -webkit-box-shadow: 0 0 1rem #ddd;
-    box-shadow: 0 0 1rem #ddd;
+    box-shadow: 0 0 1rem #1a96e4ab;
     border: 0.1rem solid #ddd;
     padding: 2rem;
 }

@@ -138,6 +138,92 @@ $(document).on("change", ".vehicle-year, .vehicle-make", function () {
         });
     }
 });
+$(document).on("click", "#addVehicle-1", function () {
+    var no = $(this).val();
+    no = ++no;
+    $(this).val(no);
+    no = pad(no);
+    var years = getYear();
+    years = years.split("</option><option>");
+    $("#addMoreVeh").append(`
+        <div id="field">
+            <input type="hidden" name="count[]">
+            <div class="px-4">
+                <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;" onclick="removeField(${no})"></i></span>
+            </div>
+            <div class="grid grid_3">
+                <div class="input_box">
+                    <label>Year</label>
+                    <div class="input_">
+                        <select class="effect-8 vehicle-year" required>
+                            <option value="" selected disabled>Year</option>
+                            ${years}
+                        </select>
+                        <span class="focus-border"><i></i></span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label>Make</label>
+                    <div class="input_">
+                        <input class="effect-8" type="text"
+                            name="make" required="" aria-required="true">
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                </div>
+                <div class="input_box">
+                    <label>Modal</label>
+                    <div class="input_">
+                        <input type="text" class="effect-8" value="" name="model[]">
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                </div>
+            </div>
+            <div class="grid grid_2 px-4" style="padding: 15px 0px;">
+                <div class="flex_ flex_space" style="margin:1rem 0;">
+                    <label class="checkbox-inline">
+                        <input type="hidden" value="1" name="veh-condition[${no}]">
+                        <input type="checkbox" checked="" name="veh-condition[${no}]" id="vehicle-condition${no}"
+                            class="checkbox-custom" value="1">
+                        <span class="checkbox-custom-dummy"></span>
+                        <span id="vcond${no}">Running</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="available_at_auction"
+                        name="available_at_auction" value="1" />
+                    <label class="form-check-label test" for="" style="margin: -2px 0px 0px 0px;padding: 0px 0px 0px 6px;"> Available
+                        at Auction?</label>
+                    <div class="input-form div-link mt-3 input_box" style="display: none;">
+                        <label class="d-block test"> Enter Link:</label>
+                        <div class="input_">
+                        <input class="test effect-8 requriedfield" type="url" id="link" name="link"
+                            placeholder="Enter Link" />
+                            <span class="focus-border">
+                            <i></i>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `);
+    $(`#vehicle-condition${no}`).click(function () {
+        if ($(this).prop("checked")) {
+            $(`#vcond${no}`).html("Running");
+            $(`#condition${no}`).val("operable");
+        } else {
+            $(`#vcond${no}`).html("Non-Running");
+            $(`#condition${no}`).val("non-running");
+        }
+    });
+});
+
 $(document).on("click", "#addVehicle", function () {
     var no = $(this).val();
     no = ++no;
@@ -151,7 +237,7 @@ $(document).on("click", "#addVehicle", function () {
             <div class="px-4">
                 <span class="delete-vehicle"><i class="fa fa-trash" style="float: right; margin-top: 0px; color: red;" onclick="removeField(${no})"></i></span>
             </div>
-            <div class="grid grid_3 px-4">
+            <div class="grid form-vehicle-section ">
                 <div class="input_box">
                     <label>Year</label>
                     <div class="input_">
@@ -256,13 +342,15 @@ $(document).on("click", "#addVehicle", function () {
                     <label>Model</label>
                     <div class="input_">
                         <input type="text" class="effect-8 vehicle-model-input" placeholder="Model">
-                        <ul class="dropdown-menu vehicle-model-dropdown"></ul>
+                        <ul class="dropdown-menu vehicle-model-dropdown w-100"></ul>
                         <select class="vehicle-model-select" style="display:none;">
                             <option value="">Select Model</option>
                         </select>
                         <span class="focus-border"><i></i></span>
                     </div>
                 </div>
+            </div>
+            <div class="grid grid_3 px-4">
                 <div class="flex_ flex_space" style="margin:1rem 0;">
                     <label class="checkbox-inline">
                         <input type="hidden" value="1" name="veh-condition[${no}]">
@@ -271,6 +359,22 @@ $(document).on("click", "#addVehicle", function () {
                         <span class="checkbox-custom-dummy"></span>
                         <span id="vcond${no}">Running</span>
                     </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="available_at_auction"
+                        name="available_at_auction" value="1" />
+                    <label class="form-check-label test" for=""> Available
+                        at Auction?</label>
+                    <div class="input-form div-link mt-3 input_box" style="display: none;">
+                        <label class="d-block test"> Enter Link:</label>
+                        <div class="input_">
+                        <input class="test effect-8 requriedfield" type="url" id="link" name="link"
+                            placeholder="Enter Link" />
+                            <span class="focus-border">
+                            <i></i>
+                        </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,6 +389,7 @@ $(document).on("click", "#addVehicle", function () {
         }
     });
 });
+
 $(document).on("click", "#addHeavy", function () {
     var no = $(this).data("count") || 0;  // Use data attribute to store count
     no++;

@@ -1,5 +1,10 @@
 @extends('frontend.layouts.app')
-
+<style>
+     .container-m {
+        width: 80%;
+        margin: auto;
+    }
+</style>
 @section('content')
     <section class="banner relative"
         style="
@@ -10,32 +15,345 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt">
-                    <h2>Car Transport Service</h2>
+                    <h2>Auto Auction Services</h2>
                 </div>
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding">
-            <div class="block__inner grid">
-                <div class="innerServices__left">
-                    <img src="https://www.shipa1.com/img/banner-5-800x400-landing.png" alt="" />
-                    <h4>
-                        A Start Car Dealer Needs a Show Stealer Car Transport Partner
-                    </h4>
-                    <p>
-                        You can’t be a star in the car dealing business if you are not an
-                        expert in shipping. To become a renowned auto auction maestro, you
-                        must have a great network, connecting with experienced brokers,
-                        carriers, and consignees across the USA.
-                    </p>
-                    <p>
-                        As we said, a professional car dealer needs a show-stealing car
-                        transport partner to handle every shipping requirement. So, who
-                        got your back to transport your auction car to another city or
-                        region in the USA? Maybe no one! But as always, Shawn Transport
-                        got something great for you!
-                    </p>
+    {{-- <main class="main"> --}}
+        <div class="container-m innerServices__left ">
+            <div class="row">
+                {{-- <div class=""> --}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 my-5 px-0 ">
+                        {{-- <img src="https://lp-auto-assets.s3.amazonaws.com/23/ford/f-150/M3/header.jpg" style="width: 100%;" alt="" /> --}}
+                        <img src="webimages/auction-banner-img.avif" style="width: 100%;" alt="" />
+                        <h4>
+                            A Start Car Dealer Needs a Show Stealer Car Transport Partner
+                        </h4>
+                        <p>
+                            You can’t be a star in the car dealing business if you are not an
+                            expert in shipping. To become a renowned auto auction maestro, you
+                            must have a great network, connecting with experienced brokers,
+                            carriers, and consignees across the USA.
+                        </p>
+                        <p>
+                            As we said, a professional car dealer needs a show-stealing car
+                            transport partner to handle every shipping requirement. So, who
+                            got your back to transport your auction car to another city or
+                            region in the USA? Maybe no one! But as always, Shawn Transport
+                            got something great for you!
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-none d-md-block">
+                        <div class="quotemain__box" style="position: relative">
+                            <h3>Get Car Quotes <span>- simple, fast &amp; easy!</span></h3>
+                            <div class="quote-offer">
+                                <img src="{{ asset('webImages/offer.png') }}" />
+                            </div>
+                            <div class="for-car" id="forCAR">
+                                <form action="{{ route('submit.quote') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" name="vehicle_opt" value="vehicle" hidden>
+                                    <input type="hidden" name="car_type" value="1" hidden>
+                                    <div class="grid grid_3">
+                                        <div class="input_box">
+                                            <label>Full Name</label>
+                                            <div class="input_">
+                                                <input class="effect-8" requ="" id="name" type="text"
+                                                    name="name" required="" aria-required="true" />
+                                                <span class="focus-border">
+                                                    <i></i>
+                                                </span>
+                                            </div>
+                                            <small class="errName"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                        <div class="input_box">
+                                            <label>Phone#</label>
+                                            <div class="input_">
+                                                <input class="effect-8 phone-num" requ="" id="phone" type="tel"
+                                                    name="phone" maxlength="14" mask="(999) 999-9999"
+                                                    placeholder="xxx-xxx-xxxx" required="" aria-required="true">
+                                                <span class="focus-border">
+                                                    <i></i>
+                                                </span>
+                                            </div>
+                                            <small class="errPhone"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                        <div class="input_box">
+                                            <label>Email</label>
+                                            <div class="input_">
+                                                <input class="effect-8" id="email" type="email" name="email"
+                                                    required="" aria-required="true">
+                                                <span class="focus-border">
+                                                    <i></i>
+                                                </span>
+                                            </div>
+                                            <small class="errEmail"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                        <!-- <div class="input_box">
+                                                            <label>Phone#</label>
+                                                            <div class="input_">
+                                                                <input class="effect-8" requ="" id="phone" type="text" name="phone"
+                                                                    maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
+                                                                    required="" aria-required="true" />
+                                                                <span class="focus-border">
+                                                                    <i></i>
+                                                                </span>
+                                                            </div>
+                                                            <script>
+                                                                $(document).ready(function() {
+                                                                    $("#phone").hover(function(e) {
+                                                                        $.each($("#phone[type='text']"), function(i, v) {
+                                                                            $(this).inputmask({
+                                                                                mask: $(this).attr("mask")
+                                                                            });
+                                                                        });
+                                                                    });
+                                                                });
+                                                            </script>
+                                                            <small class="errName"
+                                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                                        </div>
+                                                        <div class="input_box">
+                                                            <label>Email</label>
+                                                            <div class="input_">
+                                                                <input class="effect-8" requ="" id="email" type="text" name="email"
+                                                                    required="" aria-required="true" />
+                                                                <span class="focus-border">
+                                                                    <i></i>
+                                                                </span>
+                                                            </div>
+                                                            <small class="errName"
+                                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                                        </div> -->
+                                    </div>
+                                    <hr />
+                                    <div class="">
+                                        <div class="input_box">
+                                            <div class="input-form">
+                                                <label class="d-block"> Pickup Location:</label>
+                                                <input type="text" class="effect-8" id="pickup-location" name="origin"
+                                                    placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                                <small id="errOLoc" class="err-loc"></small>
+                                                <ul class="suggestions suggestionsTwo"></ul>
+                                            </div>
+                                            <small class="errName"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                    </div>
+                                    <div class="input_box">
+                                        <div class="input-form">
+                                            <label class="d-block"> Delivery Location:</label>
+                                            <input type="text" class="effect-8" id="delivery-location" name="destination"
+                                                placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                            <small id="errDLoc" class="err-loc"></small>
+                                            <ul class="suggestions suggestionsTwo"></ul>
+                                        </div>
+                                        <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                    </div>
+                                    <div class="">
+                                        <b>Vehicle Information</b>
+                                        <br />
+                                    </div>
+                                    <div class="grid grid_3">
+                                        <div class="input_box">
+                                            <label>Year</label>
+                                            <div class="input_">
+                                                <select class="effect-8 vehicle-year" required="" name="year[]"
+                                                    id="year" aria-required="true">
+                                                    <option value="" selected="" disabled="">Year</option>
+                                                </select>
+    
+                                                <script>
+                                                    const currentYear = new Date().getFullYear();
+                                                    const startYear = 1936;
+                                                    const yearSelect = document.getElementById('year');
+    
+                                                    for (let year = currentYear; year >= startYear; year--) {
+                                                        const option = document.createElement('option');
+                                                        option.value = year;
+                                                        option.textContent = year;
+                                                        yearSelect.appendChild(option);
+                                                    }
+                                                </script>
+                                                <span class="focus-border">
+                                                    <i></i>
+                                                </span>
+                                            </div>
+                                            <small class="errName"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                        <div class="input_box">
+                                            <label>Make</label>
+                                            <div class="input_">
+                                                <select class="effect-8 vehicle-make" name="make[]" requ=""
+                                                    data-placeholder="Make" aria-hidden="true">
+                                                    <option value="0" selected="" disabled=""
+                                                        data-select2-id="4">
+                                                        Make
+                                                    </option>
+                                                    <option value="Acura">Acura</option>
+                                                    <option value="Alfa Romeo">Alfa Romeo</option>
+                                                    <option value="Aptera">Aptera</option>
+                                                    <option value="Aston Martin">Aston Martin</option>
+                                                    <option value="Audi">Audi</option>
+                                                    <option value="Austin">Austin</option>
+                                                    <option value="Bentley">Bentley</option>
+                                                    <option value="BMW">BMW</option>
+                                                    <option value="Bugatti">Bugatti</option>
+                                                    <option value="Buick">Buick</option>
+                                                    <option value="Cadillac">Cadillac</option>
+                                                    <option value="Chevrolet">Chevrolet</option>
+                                                    <option value="Chrysler">Chrysler</option>
+                                                    <option value="Citroën">Citroën</option>
+                                                    <option value="Corbin">Corbin</option>
+                                                    <option value="Daewoo">Daewoo</option>
+                                                    <option value="Daihatsu">Daihatsu</option>
+                                                    <option value="Defender">Defender</option>
+                                                    <option value="Dodge">Dodge</option>
+                                                    <option value="Eagle">Eagle</option>
+                                                    <option value="Fairthorpe">Fairthorpe</option>
+                                                    <option value="Ferrari">Ferrari</option>
+                                                    <option value="FIAT">FIAT</option>
+                                                    <option value="Foose">Foose</option>
+                                                    <option value="Ford">Ford</option>
+                                                    <option value="Geo">Geo</option>
+                                                    <option value="GMC">GMC</option>
+                                                    <option value="Hillman">Hillman</option>
+                                                    <option value="Holden">Holden</option>
+                                                    <option value="Honda">Honda</option>
+                                                    <option value="HUMMER">HUMMER</option>
+                                                    <option value="Hyundai">Hyundai</option>
+                                                    <option value="Infiniti">Infiniti</option>
+                                                    <option value="Isuzu">Isuzu</option>
+                                                    <option value="Jaguar">Jaguar</option>
+                                                    <option value="Jeep">Jeep</option>
+                                                    <option value="Jensen">Jensen</option>
+                                                    <option value="Kia">Kia</option>
+                                                    <option value="Lamborghini">Lamborghini</option>
+                                                    <option value="Lamborghini,Coupé">
+                                                        Lamborghini,Coupé
+                                                    </option>
+                                                    <option value="Land Rover">Land Rover</option>
+                                                    <option value="Lexus">Lexus</option>
+                                                    <option value="Lincoln">Lincoln</option>
+                                                    <option value="Lotus">Lotus</option>
+                                                    <option value="Lotus Cars">Lotus Cars</option>
+                                                    <option value="Maserati">Maserati</option>
+                                                    <option value="Maybach">Maybach</option>
+                                                    <option value="Mazda">Mazda</option>
+                                                    <option value="McLaren">McLaren</option>
+                                                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                                    <option value="Mercury">Mercury</option>
+                                                    <option value="Merkur">Merkur</option>
+                                                    <option value="MG">MG</option>
+                                                    <option value="MINI">MINI</option>
+                                                    <option value="Mitsubishi">Mitsubishi</option>
+                                                    <option value="Morgan">Morgan</option>
+                                                    <option value="Nissan">Nissan</option>
+                                                    <option value="Oldsmobile">Oldsmobile</option>
+                                                    <option value="Panoz">Panoz</option>
+                                                    <option value="Peugeot">Peugeot</option>
+                                                    <option value="Plymouth">Plymouth</option>
+                                                    <option value="Pontiac">Pontiac</option>
+                                                    <option value="Porsche">Porsche</option>
+                                                    <option value="Ram">Ram</option>
+                                                    <option value="Rambler">Rambler</option>
+                                                    <option value="Renault">Renault</option>
+                                                    <option value="Rolls-Royce">Rolls-Royce</option>
+                                                    <option value="Saab">Saab</option>
+                                                    <option value="Saturn">Saturn</option>
+                                                    <option value="Scion">Scion</option>
+                                                    <option value="Shelby">Shelby</option>
+                                                    <option value="Smart">Smart</option>
+                                                    <option value="Spyker">Spyker</option>
+                                                    <option value="Spyker Cars">Spyker Cars</option>
+                                                    <option value="Studebaker">Studebaker</option>
+                                                    <option value="Subaru">Subaru</option>
+                                                    <option value="Suzuki">Suzuki</option>
+                                                    <option value="Tesla">Tesla</option>
+                                                    <option value="Toyota">Toyota</option>
+                                                    <option value="Volkswagen">Volkswagen</option>
+                                                    <option value="Volvo">Volvo</option>
+                                                </select>
+                                                <span class="focus-border">
+                                                    <i></i>
+                                                </span>
+                                            </div>
+                                            <small class="errName"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                        <div class="input_box vehicle-model-div">
+                                            <label>Model</label>
+                                            <div class="input_">
+                                                <select class="effect-8" requ="" name="model[]"
+                                                    data-placeholder="Model" aria-hidden="true"></select>
+                                                <span class="focus-border">
+                                                    <i></i>
+                                                </span>
+                                            </div>
+                                            <small class="errName"
+                                                style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" id="addVehicle"
+                                        style="border-radius: 0.2rem" value="1">
+                                        Add Vehicle
+                                    </button>
+                                    <div class="clearfix"></div>
+    
+                                    <hr />
+                                    <div class="row" style="margin-top: 8px; margin-bottom: 8px">
+                                        <div class="col-md-6 pd-lr-5 mb-mb-10">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" checked="" name="carrier-type"
+                                                        class="checkbox-custom" value="1" id="carrier-type"
+                                                        data-parsley-multiple="carrier-type" /><span
+                                                        class="checkbox-custom-dummy"></span>
+                                                    <span id="carrierType">Open</span> Carrier
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pd-lr-5 mb-mb-10">
+                                            <div class="form-wrap form-wrap-validation">
+                                                <label class="checkbox-inline">
+                                                    <input type="hidden" name="veh-condition[0]" value="1" />
+                                                    <input type="checkbox" checked="" name="veh-condition[0]"
+                                                        id="vehicle-condition" class="checkbox-custom" value="1"
+                                                        data-parsley-multiple="veh-condition0" /><span
+                                                        class="checkbox-custom-dummy"></span>
+                                                    <span id="vcond">Running</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div id="addMoreVeh"></div>
+                                    <button class="btn w-100 btn-primary" id="calculatePriceBttn"
+                                        style="border-radius: 0.3rem" type="submit">
+                                        Calculate Price
+                                    </button>
+                                </form>
+                            </div>
+                            <br />
+                            <ul class="flex_ list">
+                                <li>
+                                    <img src="https://www.shawntransport.com//img/reviews/bbb.png" alt="" />
+                                </li>
+                                <li>
+                                    <img src="https://www.shawntransport.com//img/reviews/google-reviews.png"
+                                        alt="" />
+                                </li>
+                                <li>
+                                    <img src="https://www.shawntransport.com//img/reviews/yelp.png" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <h4>Shawn Transport - Your Game Changer Spot for Auto Auctions</h4>
                     <p>
                         What? Did you call for an expert car transport and heavy equipment
@@ -187,8 +505,8 @@
                             </p>
                         </li>
                     </ul>
-                </div>
-                <div class="innerServices__right">
+                {{-- </div> --}}
+                {{-- <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-block d-md-none">
                     <div class="quotemain__box" style="position: relative">
                         <h3>Get Car Quotes <span>- simple, fast &amp; easy!</span></h3>
                         <div class="quote-offer">
@@ -238,41 +556,41 @@
                                             style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                     </div>
                                     <!-- <div class="input_box">
-                                                    <label>Phone#</label>
-                                                    <div class="input_">
-                                                        <input class="effect-8" requ="" id="phone" type="text" name="phone"
-                                                            maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
-                                                            required="" aria-required="true" />
-                                                        <span class="focus-border">
-                                                            <i></i>
-                                                        </span>
-                                                    </div>
-                                                    <script>
-                                                        $(document).ready(function() {
-                                                            $("#phone").hover(function(e) {
-                                                                $.each($("#phone[type='text']"), function(i, v) {
-                                                                    $(this).inputmask({
-                                                                        mask: $(this).attr("mask")
+                                                        <label>Phone#</label>
+                                                        <div class="input_">
+                                                            <input class="effect-8" requ="" id="phone" type="text" name="phone"
+                                                                maxlength="14" mask="(999) 999-9999" placeholder="xxx-xxx-xxxx"
+                                                                required="" aria-required="true" />
+                                                            <span class="focus-border">
+                                                                <i></i>
+                                                            </span>
+                                                        </div>
+                                                        <script>
+                                                            $(document).ready(function() {
+                                                                $("#phone").hover(function(e) {
+                                                                    $.each($("#phone[type='text']"), function(i, v) {
+                                                                        $(this).inputmask({
+                                                                            mask: $(this).attr("mask")
+                                                                        });
                                                                     });
                                                                 });
                                                             });
-                                                        });
-                                                    </script>
-                                                    <small class="errName"
-                                                        style="color: red; font-size: 1rem; margin-left: 3px"></small>
-                                                </div>
-                                                <div class="input_box">
-                                                    <label>Email</label>
-                                                    <div class="input_">
-                                                        <input class="effect-8" requ="" id="email" type="text" name="email"
-                                                            required="" aria-required="true" />
-                                                        <span class="focus-border">
-                                                            <i></i>
-                                                        </span>
+                                                        </script>
+                                                        <small class="errName"
+                                                            style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                                     </div>
-                                                    <small class="errName"
-                                                        style="color: red; font-size: 1rem; margin-left: 3px"></small>
-                                                </div> -->
+                                                    <div class="input_box">
+                                                        <label>Email</label>
+                                                        <div class="input_">
+                                                            <input class="effect-8" requ="" id="email" type="text" name="email"
+                                                                required="" aria-required="true" />
+                                                            <span class="focus-border">
+                                                                <i></i>
+                                                            </span>
+                                                        </div>
+                                                        <small class="errName"
+                                                            style="color: red; font-size: 1rem; margin-left: 3px"></small>
+                                                    </div> -->
                                 </div>
                                 <hr />
                                 <div class="">
@@ -333,8 +651,8 @@
                                     <div class="input_box">
                                         <label>Make</label>
                                         <div class="input_">
-                                            <select class="effect-8 vehicle-make" requ="" data-placeholder="Make"
-                                                aria-hidden="true">
+                                            <select class="effect-8 vehicle-make" name="make[]" requ=""
+                                                data-placeholder="Make" aria-hidden="true">
                                                 <option value="0" selected="" disabled=""
                                                     data-select2-id="4">
                                                     Make
@@ -433,8 +751,8 @@
                                     <div class="input_box vehicle-model-div">
                                         <label>Model</label>
                                         <div class="input_">
-                                            <select class="effect-8" requ="" data-placeholder="Model"
-                                                aria-hidden="true"></select>
+                                            <select class="effect-8" requ="" name="model[]"
+                                                data-placeholder="Model" aria-hidden="true"></select>
                                             <span class="focus-border">
                                                 <i></i>
                                             </span>
@@ -497,8 +815,8 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection

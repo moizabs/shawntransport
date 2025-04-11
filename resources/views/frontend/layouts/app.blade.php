@@ -15,6 +15,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    <!--<link rel="stylesheet" href="{{ asset('/css/swiper.min.css') }}">-->
+    <!--<link rel=stylesheet href=https://unpkg.com/swiper/swiper-bundle.min.css>-->
+    <!--<script src="{{ asset('/js/swiper.min.js') }}"></script>-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     {{-- <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css"> --}}
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -25,6 +29,32 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <title>Shawn Transport</title>
+    <style>
+        .image-preview-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .image-preview {
+          position: relative;
+          display: inline-block;
+        }
+        .image-preview img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+        .remove-button {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background-color: red;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,6 +86,7 @@
 <script src="{{ asset('js/jquery.inputmask.bundle.js') }}"></script>
 <script src="{{ asset('js/custom-car2.js') }}"></script>
 {{-- <script src="{{ asset('js/custom-heavy2.js') }}"></script> --}}
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
 <script type="text/javascript">
     var onloadCallback = function() {
@@ -477,5 +508,82 @@
         });
     });
 </script>
+    <script>
+        // $(document).ready((function() {
+        //     function i(i, n, e) {
+        //         $(document).on("change", i, (function() {
+        //             $(this).is(":checked") ? ($(n).show(), $(e).attr("required", !0)) : ($(n)
+        //                 .hide(), $(e).val(""), $(e).removeAttr("required"))
+        //         }))
+        //     }
+        //     i(".div-link", "#link-1"), i("#modification", ".div-modify_info", "#c")
+        // }))
+    </script>
+    <script>
+        let selectedFiles = [];
 
+        function previewImages(e) {
+            var t = e.target,
+                a = document.getElementById("imagePreviewContainer");
+            t.files && Array.from(t.files).forEach((e => {
+                if (!selectedFiles.some((t => t.name === e.name && t.size === e.size))) {
+                    selectedFiles.push(e);
+                    var t = new FileReader;
+                    t.onload = function(t) {
+                        var n = document.createElement("div");
+                        n.classList.add("image-preview"), n.innerHTML =
+                            `\n                            <img src="${t.target.result}" alt="Image Preview">\n                            <button class="remove-button" onclick="removeImage('${e.name}', ${e.size})">Remove</button>\n                        `,
+                            a.appendChild(n)
+                    }, t.readAsDataURL(e)
+                }
+            }))
+        }
+
+        function removeImage(e, t) {
+            var a = document.getElementById("imagePreviewContainer");
+            selectedFiles = selectedFiles.filter((a => !(a.name === e && a.size === t))), a.innerHTML = "", selectedFiles
+                .forEach((e => {
+                    var t = new FileReader;
+                    t.onload = function(t) {
+                        var n = document.createElement("div");
+                        n.classList.add("image-preview"), n.innerHTML =
+                            `\n                    <img src="${t.target.result}" alt="Image Preview">\n                    <button class="remove-button" onclick="removeImage('${e.name}', ${e.size})">Remove</button>\n                `,
+                            a.appendChild(n)
+                    }, t.readAsDataURL(e)
+                }))
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Attach event handler for the first checkbox
+            $(".form-check-input[name='available_at_auction']").change(function () {
+                let parentDiv = $(this).closest(".row");
+                let linkDiv = parentDiv.find(".div-link");
+                let linkInput = parentDiv.find("input[name='link']");
+        
+                if ($(this).is(":checked")) {
+                    linkDiv.show();
+                    linkInput.attr("required", true);
+                } else {
+                    linkDiv.hide();
+                    linkInput.val("").removeAttr("required");
+                }
+            });
+        
+            // Attach event handler for dynamically added checkboxes
+            $(document).on("change", ".form-check-input[name='available_at_auction']", function () {
+                let parentDiv = $(this).closest(".grid_2").parent();
+                let linkDiv = parentDiv.find(".div-link");
+                let linkInput = parentDiv.find("input[name='link']");
+        
+                if ($(this).is(":checked")) {
+                    linkDiv.show();
+                    linkInput.attr("required", true);
+                } else {
+                    linkDiv.hide();
+                    linkInput.val("").removeAttr("required");
+                }
+            });
+        });
+    </script>
 </html>

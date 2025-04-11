@@ -16,7 +16,27 @@ class FrontendController extends Controller
         return view('frontend.pages.car');
     }
 
-    public function atvUtv()
+    public function atvutv()
+    {
+        return view('frontend.pages.atvutv-quote');
+    }
+    public function farm()
+    {
+        return view('frontend.pages.farm');
+    }
+    public function excavator()
+    {
+        return view('frontend.pages.excavator');
+    }
+    public function commercial()
+    {
+        return view('frontend.pages.commercial');
+    }
+    public function construction()
+    {
+        return view('frontend.pages.construction');
+    }
+    public function atvUtvSer()
     {
         return view('frontend.pages.atv-utv-transport');
     }
@@ -30,15 +50,32 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.blog');
     }
+    public function aboutUs()
+    {
+        return view('frontend.pages.aboutUs');
+    }
+    
+    public function contactUs()
+    {
+        return view('frontend.pages.contactUs');
+    }
 
     public function carShippingService()
     {
         return view('frontend.pages.car-shipping-service');
     }
+        public function quoteIndex()
+    {
+        return view('frontend.pages.quote-index');
+    }
 
     public function commercialTruckTransport()
     {
         return view('frontend.pages.commercial-truck-transport');
+    }
+        public function trackOrder()
+    {
+        return view('frontend.pages.trackorder');
     }
 
     public function constructionEquipmentTransportShipping()
@@ -65,6 +102,11 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.heavy');
     }
+    
+    public function termsCondition()
+    {
+        return view('frontend.pages.term-condition');
+    }
 
     public function motorcycleShippingService()
     {
@@ -79,6 +121,11 @@ class FrontendController extends Controller
     public function pricing()
     {
         return view('frontend.pages.pricing');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('frontend.pages.privacy-policy');
     }
 
     public function roroShippingInternational()

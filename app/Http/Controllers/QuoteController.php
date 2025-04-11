@@ -15,8 +15,8 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->toArray());
         $data = $request->all();
+        $vehicles = [];
         if (isset($data['year']) && is_array($data['year'])) {
             $heading = $this->generateHeading($data);
 
@@ -36,7 +36,7 @@ class QuoteController extends Controller
         $email = $request->input('email', null);
         $phone = $request->input('phone', null);
 
-        $vehicles = [];
+
         $vehicle_opt = '';
 
         $year = isset($data['year']) && is_array($data['year'])
@@ -103,6 +103,15 @@ class QuoteController extends Controller
             ? $this->generateStringFromArray($data['subcategory'])
             : $request->input('subcategory', null);
 
+        $transport = isset($data['trailer_type']) && is_array($data['trailer_type'])
+            ? $this->generateStringFromArray($data['trailer_type'])
+            : $request->input('trailer_type', null);
+
+        $type = isset($data['trailer_type']) && is_array($data['trailer_type'])
+            ? $this->generateStringFromArray($data['trailer_type'])
+            : $request->input('trailer_type', null);
+
+
         // $transport = isset($data['trailer_type']) && is_array($data['trailer_type'])
         //     ? $this->generateStringFromArray($data['trailer_type'])
         //     : $request->input('trailer_type', null);
@@ -116,8 +125,7 @@ class QuoteController extends Controller
         // $destinationData = $request->input('To_ZipCode', null);
         // $destinationData = $request->input('destination', null);
         $additional = $request->input('add_info', null);
-        $transport = $request->input('trailer_type');
-        $type = $request->input('trailer_type');
+
         $shippingdate = $request->input('dates', null);
         $link = $request->input('link', null);
         $modification = $request->input('modification', null);
@@ -291,21 +299,18 @@ class QuoteController extends Controller
             'price_giver_allow' => $price_giver_allow,
             'need_permit' => $need_permit,
         ];
-
         if ($request->hasFile('image')) {
             $uploadedImages = $request->file('image');
             $imageUrls = [];
 
             foreach ($uploadedImages as $image) {
                 $imagePath = $this->uploadImage('quoteForm', $image);
-                $imageUrl = 'https://shipa1.com/public/' . $imagePath;
+                $imageUrl = 'https://shawntransport.com/public/' . $imagePath;
                 $imageUrls[] = $imageUrl;
             }
 
             $post_array['image'] = implode('*^', $imageUrls);
         }
-
-        // dd($post_array, $request->toArray());
 
         // $data = PortDetail::with(['portToPort' => function ($q) use ($delivery_latitude, $delivery_longitude) {
         //     $q->where('delivery_latitude', $delivery_latitude)

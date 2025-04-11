@@ -5,7 +5,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt">
-                    <h2>Car Transport Service</h2>
+                    <h2>Auto Auction Services</h2>
 
                 </div>
             </li>

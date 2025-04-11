@@ -1,11 +1,91 @@
 @extends('frontend.layouts.app')
-
+<style>
+    .main {
+        position: relative;
+        background: url(../webImages/Shipping.jpg) no-repeat center center/cover;
+        min-height: 100vh;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        z-index: 1;
+    }
+    .content {
+        position: relative;
+        z-index: 2; 
+        padding: 20px;
+    }
+    .make-dropdown {
+        max-height: 200px !important;
+        overflow-y: auto !important;
+    }
+    .dropdown-item {
+        white-space: nowrap !important;
+    }
+    .model-dropdown {
+        max-height: 200px !important;
+        overflow-y: auto !important;
+        position: absolute !important;
+        z-index: 1000 !important;
+    }
+    .vehicle-model-dropdown {
+    overflow: overlay;
+    height: 100px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 14px !important;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    font-weight: normal;
+    display: block;
+    }
+    .image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+    }
+    .image-preview {
+      position: relative;
+      display: inline-block;
+    }
+    .image-preview img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .remove-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: red;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+</style>
 @section('content')
     <section class="banner relative" style="max-height:10rem; min-height:10rem; ">
 
     </section>
     <main class="main">
-        <div class="quotemain grid grid-col60 vertical__padding">
+        <div class="overlay"></div>
+        <div class="quotemain grid grid-col60 vertical__padding content">
             <div class="block__inner">
                 <h2>Instant Car Shipping Quote!</h2>
                 <div class="quotemain__box">
@@ -52,7 +132,7 @@
                                 </div>
                             </div>
                             <hr />
-                            <div class="">
+                            <div class="grid grid_2">
                                 <div class="input_box">
                                     <div class="input-form">
                                         <label class="d-block"> Pickup Location:</label>
@@ -63,18 +143,18 @@
                                     </div>
                                     <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
-                            </div>
-                            <div class="input_box">
-                                <div class="input-form">
-                                    <label class="d-block"> Delivery Location:</label>
-                                    <input type="text" class="effect-8" id="delivery-location" name="destination"
-                                        placeholder="Ex: 90005 Or Los Angeles" required="" />
-                                    <small id="errDLoc" class="err-loc"></small>
-                                    <ul class="suggestions suggestionsTwo"></ul>
+                                <div class="input_box">
+                                    <div class="input-form">
+                                        <label class="d-block"> Delivery Location:</label>
+                                        <input type="text" class="effect-8" id="delivery-location" name="destination"
+                                            placeholder="Ex: 90005 Or Los Angeles" required="" />
+                                        <small id="errDLoc" class="err-loc"></small>
+                                        <ul class="suggestions suggestionsTwo"></ul>
+                                    </div>
+                                    <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                                 </div>
-                                <small class="errName" style="color: red; font-size: 1rem; margin-left: 3px"></small>
                             </div>
-                            <div class="">
+                            <div class="text-center">
                                 <b>Vehicle Information</b>
                                 <br>
                             </div>
@@ -207,7 +287,7 @@
                                 <div class="input_box vehicle-model-div">
                                     <label>Model</label>
                                     <div class="input_">
-                                        <select class="effect-8" requ="" data-placeholder="Model"
+                                        <select class="effect-8" requ="" name="model[]" data-placeholder="Model"
                                             aria-hidden="true"></select>
                                         <span class="focus-border">
                                             <i></i>
@@ -217,34 +297,47 @@
                                 </div>
                             </div>
                             <div class="row" style="margin-top:8px; margin-bottom: 8px;">
-                                <div class="col-md-6 pd-lr-5 mb-mb-10">
-                                    <div class="form-wrap form-wrap-validation">
-                                        <label class="checkbox-inline">
-                                            <input type="checkbox" checked="" name="carrier-type"
-                                                class="checkbox-custom" value="1" id="carrier-type"
-                                                data-parsley-multiple="carrier-type"><span
-                                                class="checkbox-custom-dummy"></span>
-                                            <span id="carrierType">Open</span> Carrier
-                                        </label>
+                                <div class="col-md-4 pd-lr-5 mb-mb-10">
+                                    <label for="condition">Condition</label>
+                                    <div class="input_box">
+                                        <select class="effect-8 lh-base" id="condition" name="condition[]">
+                                            <option value="1" selected>Running</option>
+                                            <option value="2">Non Running</option>
+                                        </select>
+                                        <span class="focus-border">
+                                            <i></i>
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="col-md-6 pd-lr-5 mb-mb-10">
-                                    <div class="form-wrap form-wrap-validation">
-                                        <label class="checkbox-inline">
-                                            <input type="hidden" name="veh-condition[0]" value="1">
-                                            <input type="checkbox" checked="" name="veh-condition[0]"
-                                                id="vehicle-condition" class="checkbox-custom" value="1"
-                                                data-parsley-multiple="veh-condition0"><span
-                                                class="checkbox-custom-dummy"></span>
-                                            <span id="vcond">Running</span>
-                                        </label>
+                                <div class="col-md-4 pd-lr-5 mb-mb-10">
+                                    <label for="trailer_type">Select Trailer Type</label>
+                                    <div class="input_box">
+                                        <select class="effect-8 lh-base" id="trailer_type" name="trailer_type">
+                                            <option value="1" selected>Open Trailer</option>
+                                            <option value="2">Enclosed Trailer</option>
+                                        </select>
+                                        <span class="focus-border">
+                                            <i></i>
+                                        </span>
                                     </div>
                                 </div>
-                                <!-- <div class="col-sm-12 mb-mb-10">
-                                        <div class="g-recaptcha" id="feedback-recaptcha"
-                                             data-sitekey="6LeP8KUkAAAAAKR-KmOe7vESgh--xv5Iz9CaypCq">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="available_at_auction"
+                                            name="available_at_auction" value="1" />
+                                        <label class="form-check-label test" for="" style="margin: -2px 0px 0px 0px;padding: 0px 0px 0px 6px;"> Available
+                                            at Auction?</label>
+                                        <div class="input-form div-link mt-3 input_box" style="display: none;">
+                                            <div class="input_">
+                                            <input class="test effect-8 requriedfield" type="url" id="link-1" name="link"
+                                                placeholder="Enter Link" />
+                                                <span class="focus-border">
+                                                <i></i>
+                                            </span>
+                                            </div>
                                         </div>
-                                    </div> -->
+                                    </div>
+                                </div>
                             </div>
                             <hr />
                             <button type="button" class="btn btn-primary" id="addVehicle" style="border-radius:.2rem;"
@@ -253,6 +346,49 @@
                             <div class="clearfix"></div>
                             <hr />
                             <div id="addMoreVeh"></div>
+                            <div class="row" style="padding: 0px 15px 15px 15px;">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-check-input " type="checkbox" id="modification"
+                                            name="modification" value="1" />
+                                        <label class="form-check-label ms-4 test" for="modification">
+                                            Modified?</label>
+                                    </div>
+                                    <div class="input-form div-modify_info input_box" style="display: none;">
+                                        <label class="d-block test"> Modification Information:</label>
+                                        <div class="input_">
+                                        <input  class="test effect-8 requriedfield" type="text" id="c" name="modify_info"
+                                            placeholder="Enter Modification Information" /><span class="focus-border">
+                                            <i></i>
+                                        </span></div>
+                                    </div>
+                                </div>
+                                <!--<div class="col-md-6">-->
+                                <!--    <div class="input-form mt-1 input_box">-->
+                                <!--        <label class="d-block"> Image:</label>-->
+                                <!--        <div class="input_" style="padding: 0px 15px 15px 15px;">-->
+                                <!--        <input class=" image_input test effect-8" name="image[]" type="file"-->
+                                <!--            accept="image/*" multiple onchange="previewImages(event)"><span class="focus-border">-->
+                                <!--                <i></i>-->
+                                <!--            </span></div>-->
+                                <!--        <div class="image-preview-container" id="imagePreviewContainer"></div> -->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                <div class="col-md-6">
+                                    <div class="input-form mt-1 input_box">
+                                        <label class="d-block"> Image:</label>
+                                        <div class="input_" style="padding: 0px 15px 15px 15px;">
+                                            <input class="image_input test effect-8" id="imageInput" name="image[]" type="file" accept="image/*" multiple>
+                                            <span class="focus-border"><i></i></span>
+                                        </div>
+                                        <div class="image-preview-container" id="imagePreviewContainer"></div> 
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--<div class="row" style="padding: 0px 15px 15px 15px;">-->
+                                
+                            <!--</div>-->
                             {{-- <div class="row" style="margin-top:8px; margin-bottom: 8px;">
                                 <div class="col-sm-12 mb-mb-10">
                                     <div class="g-recaptcha" id="feedback-recaptcha"
@@ -269,4 +405,133 @@
             </div>
         </div>
     </main>
+    <script>
+        $(document).ready((function() {
+            function i(i, n, e) {
+                $(document).on("change", i, (function() {
+                    $(this).is(":checked") ? ($(n).show(), $(e).attr("required", !0)) : ($(n)
+                        .hide(), $(e).val(""), $(e).removeAttr("required"))
+                }))
+            }
+            i(".div-link", "#link"), i("#modification", ".div-modify_info", "#c")
+        }))
+    </script>
+    <!--<script>-->
+    <!--    let selectedFiles = [];-->
+
+    <!--    function previewImages(e) {-->
+    <!--        var t = e.target,-->
+    <!--            a = document.getElementById("imagePreviewContainer");-->
+    <!--        t.files && Array.from(t.files).forEach((e => {-->
+    <!--            if (!selectedFiles.some((t => t.name === e.name && t.size === e.size))) {-->
+    <!--                selectedFiles.push(e);-->
+    <!--                var t = new FileReader;-->
+    <!--                t.onload = function(t) {-->
+    <!--                    var n = document.createElement("div");-->
+    <!--                    n.classList.add("image-preview"), n.innerHTML =-->
+    <!--                        `\n                            <img src="${t.target.result}" alt="Image Preview">\n                            <button class="remove-button" onclick="removeImage('${e.name}', ${e.size})">Remove</button>\n                        `,-->
+    <!--                        a.appendChild(n)-->
+    <!--                }, t.readAsDataURL(e)-->
+    <!--            }-->
+    <!--        }))-->
+    <!--    }-->
+
+    <!--    function removeImage(e, t) {-->
+    <!--        var a = document.getElementById("imagePreviewContainer");-->
+    <!--        selectedFiles = selectedFiles.filter((a => !(a.name === e && a.size === t))), a.innerHTML = "", selectedFiles-->
+    <!--            .forEach((e => {-->
+    <!--                var t = new FileReader;-->
+    <!--                t.onload = function(t) {-->
+    <!--                    var n = document.createElement("div");-->
+    <!--                    n.classList.add("image-preview"), n.innerHTML =-->
+    <!--                        `\n                    <img src="${t.target.result}" alt="Image Preview">\n                    <button class="remove-button" onclick="removeImage('${e.name}', ${e.size})">Remove</button>\n                `,-->
+    <!--                        a.appendChild(n)-->
+    <!--                }, t.readAsDataURL(e)-->
+    <!--            }))-->
+    <!--    }-->
+    <!--</script>-->
+    <script>
+    let selectedFiles = [];
+
+    document.getElementById("imageInput").addEventListener("change", previewImages);
+
+    function previewImages(event) {
+        const input = event.target;
+        const previewContainer = document.getElementById("imagePreviewContainer");
+
+        Array.from(input.files).forEach(file => {
+            if (!selectedFiles.some(f => f.name === file.name && f.size === file.size && f.lastModified === file.lastModified)) {
+                selectedFiles.push(file);
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const previewDiv = document.createElement("div");
+                    previewDiv.classList.add("image-preview");
+                    previewDiv.dataset.fileName = file.name;
+                    previewDiv.dataset.fileSize = file.size;
+                    previewDiv.innerHTML = `
+                        <img src="${e.target.result}" alt="Image Preview">
+                        <button class="remove-button">Remove</button>
+                    `;
+
+                    previewDiv.querySelector(".remove-button").addEventListener("click", function() {
+                        removeImage(file, previewDiv);
+                    });
+
+                    previewContainer.appendChild(previewDiv);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        updateInputFiles();
+    }
+
+    function removeImage(file, previewDiv) {
+        selectedFiles = selectedFiles.filter(f => !(f.name === file.name && f.size === file.size && f.lastModified === file.lastModified));
+        previewDiv.remove();
+        updateInputFiles();
+    }
+
+    function updateInputFiles() {
+        const dataTransfer = new DataTransfer(); // Create a new FileList
+        selectedFiles.forEach(file => dataTransfer.items.add(file));
+
+        document.getElementById("imageInput").files = dataTransfer.files; // Update input field
+    }
+</script>
+    <script>
+        $(document).ready(function () {
+            // Attach event handler for the first checkbox
+            $(".form-check-input[name='available_at_auction']").change(function () {
+                let parentDiv = $(this).closest(".row");
+                let linkDiv = parentDiv.find(".div-link");
+                let linkInput = parentDiv.find("input[name='link']");
+        
+                if ($(this).is(":checked")) {
+                    linkDiv.show();
+                    linkInput.attr("required", true);
+                } else {
+                    linkDiv.hide();
+                    linkInput.val("").removeAttr("required");
+                }
+            });
+        
+            // Attach event handler for dynamically added checkboxes
+            $(document).on("change", ".form-check-input[name='available_at_auction']", function () {
+                let parentDiv = $(this).closest(".grid_2").parent();
+                let linkDiv = parentDiv.find(".div-link");
+                let linkInput = parentDiv.find("input[name='link']");
+        
+                if ($(this).is(":checked")) {
+                    linkDiv.show();
+                    linkInput.attr("required", true);
+                } else {
+                    linkDiv.hide();
+                    linkInput.val("").removeAttr("required");
+                }
+            });
+        });
+    </script>
 @endsection

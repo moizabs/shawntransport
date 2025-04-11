@@ -1,7 +1,13 @@
 @extends('frontend.layouts.app')
-
+<style>
+    .container-m {
+        width: 80%;
+        margin: auto;
+    }
+</style>
 @section('content')
-    <section class="banner relative" style="max-height:30rem; min-height:30rem; background: url('webImages/banners/2.jpg');">
+    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+    background: url('webImages/banners/2.jpg')no-repeat center center;">
         <ul class="list">
             <li>
                 <div class="banner__Txt">
@@ -11,11 +17,34 @@
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding">
-            <div class="block__inner grid">
-                <div class="innerServices__left">
-                    <img src="webImages/services/farm-transportation.png" alt="">
+    {{-- <main class="main"> --}}
+        <div class="container-m innerServices__left">
+            <div class="row">
+                {{-- <div class="innerServices__left"> --}}
+                    <div class="col-lg-8 col-md-8 col-sm-12 my-5 ">
+                        <img src="webImages/services/farm-transportation.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-none d-md-block">
+                        <img src="webImages/sidebar-quote-promo.gif" alt="">
+                        <div class="blog-contact">
+                            <h3 class="">Contact Us</h3>
+                            <ul class="list">
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>Call Us : <strong>1-844-474-4721</strong></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email : <a href="mailto:quote@shawntransport.com">quote@shawntransport.com</a></span>
+                                </li>
+                                <li style="margin-top:5px;">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Sat - Thu: 8AM - 7PM </span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </div>
                     <h4>Farm Transport Services</h4>
                     <p><a href="#">Farm transportation</a> or simply farm transport begins and end with properly
                         managed shipment process. It needs adequate tools to perform the task efficiently. Transport has its
@@ -66,19 +95,19 @@
                         experts who will get your job done effectively. Get your online quotes, choose your desired service
                         for farm transport, and start your journey today. </p>
                     <br>
-                    <div class="grid grid_3" style="gap: 2rem;">
-                        <div class="card">
+                    {{-- <div class="grid grid_3" style="gap: 2rem;"> --}}
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Insurance Coverage</h2>
                             <p>All of the professional auto shipping companies such as Shawn Transport provide ample
                                 insurance coverage during transit and you would reap in benefits if any damage happens.</p>
                         </div>
-                        <div class="card">
+                        <div class="card col-lg-5 col-md-5 col-sm-12 m-4">
                             <h2>Competent Shipping Team</h2>
                             <p>Our assigned shipping team focuses on the safety of the shipment and to properly attach the
                                 equipment with straps. We will make sure that you are completely sattisfied with our
                                 service.</p>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                     <br>
                     <h4>Additional Services Provided</h4>
                     <ul class="click_style">
@@ -118,8 +147,8 @@
                         </li>
                     </ul>
 
-                </div>
-                <div class="innerServices__right">
+                {{-- </div> --}}
+                <div class="col-lg-4 col-md-4 col-sm-12 my-5 d-block d-md-none  ">
                     <img src="webImages/sidebar-quote-promo.gif" alt="">
                     <div class="blog-contact">
                         <h3 class="">Contact Us</h3>
@@ -142,5 +171,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection
