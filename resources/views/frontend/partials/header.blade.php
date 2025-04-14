@@ -18,7 +18,7 @@
         <div class="header__logo" style="  position: relative; color: white;">
             <a href="{{ route('index') }}"  style="  position: relative; color: white; ">
                 {{-- <h3>Shawn Transport</h3> --}}
-                <img src="https://i.ibb.co/LzmX0ftf/Shawn-Transport-Logo-removed-background.png"  style="height: 60px; width:225px;" alt="">
+                <img src="https://i.ibb.co/LzmX0ftf/Shawn-Transport-Logo-removed-background.png"  style="height: 60px; width:200px;" alt="">
             </a>
             {{-- <a href="https://imgbb.com/"><img src="https://i.ibb.co/vxWXw7G9/new-white-logo.png" alt="new-white-logo" border="0"></a> --}}
             {{-- <a href="https://imgbb.com/"><img src="https://i.ibb.co/zhjwqN4X/new-white-logo.png" alt="new-white-logo" border="0"></a> --}}

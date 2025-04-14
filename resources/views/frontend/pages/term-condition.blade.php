@@ -4,19 +4,19 @@
         background: white;
         position: relative;
         /* background: url(https://www.shipa1.com/img/infographics-bg.png) no-repeat center center / cover; */
-        padding: 25px 10px;
+        /* padding: 25px 10px; */
         text-align: left;
     }
 
     .overlay {
-        position: absolute;
+        /* position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background: rgb(0 0 0 / 3%);
         border: 1px solid #0000001f;
-        box-shadow: #00000042 0px 0px 10px 5px;
+        box-shadow: #00000042 0px 0px 10px 5px; */
     }
 
     .terms-content {
@@ -68,12 +68,11 @@
             </li>
         </ul>
     </section>
-    <main class="main">
-        <div class="innerServices grid grid-col90 vertical__padding" style="
-    background: linear-gradient(231deg, #2bdadc, #0067f4d9);">
-            <div class="block__inner grid_1">
-                <div class="terms-section">
-                    <div class="overlay"></div>
+    {{-- <main class="main"> --}}
+        <div class="container my-5" style="">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class=""></div>
                     <div class="terms-content">
                         <h4>Terms & Conditions</h4>
                         <p>Welcome to Shawn Transport! By using our services, you agree to comply with the following terms and conditions. Please read them carefully before booking a shipment.</p>
@@ -109,5 +108,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    {{-- </main> --}}
 @endsection
