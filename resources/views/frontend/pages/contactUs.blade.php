@@ -184,10 +184,13 @@
 
 </style>
 @section('content')
-    <section class="banner relative" style="display: flex; max-height:30rem; min-height:30rem; background-size: cover; justify-content: center; align-items: center; background: url('webImages/banners/2.jpg') no-repeat center center;">
+    <section class="banner relative" style="display: flex; max-height:30rem; min-height:30rem; background-size: cover; justify-content: start; align-items: center; background: url('webImages/banners/2.jpg') no-repeat center center;">
         <ul class="list">
             <li>
-                <div class="banner__Txt text-nowrap">
+                <div class="banner__Txt d-none d-md-block ">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="banner__Txt d-block d-md-none ">
                     <h2>Contact Us</h2>
                 </div>
             </li>
