@@ -11,11 +11,15 @@
         max-height: 30rem;
         min-height: 30rem;
         background: url('webImages/banners/2.jpg');
+        display: flex; justify-content: start; align-items: center;
       ">
         <ul class="list">
             <li>
-                <div class="banner__Txt">
+                <div class="banner__Txt d-none d-md-block">
                     <h2>Auto Auction Services</h2>
+                </div>
+                <div class="banner__Txt d-block d-md-none">
+                    <h4>Auto Auction Services</h4>
                 </div>
             </li>
         </ul>

@@ -15,7 +15,7 @@
             </li>
         </ul>
     </section>
-    <main class="main">
+    <main class="main innerServices__left">
         <div class="innerServices grid grid-col90 vertical__padding">
             <div class="block__inner grid_1">
                 <div class="">
@@ -36,7 +36,7 @@
                     </p>
                 
                     <br />
-                    <b>Your Data with Shawn Transport</b>
+                    <h4>Your Data with Shawn Transport</h4>
                     <p>
                         Shawn Transport is the optimal force for the promotion of ethical shipping and legally following on-road
                         regulations as per all native counties, states, and regions nationally. We inquire and request the data,
@@ -45,7 +45,7 @@
                     </p>
                 
                     <br />
-                    <b>Info & Additional Data</b>
+                    <h4>Info & Additional Data</h4>
                     <p>
                         Following the FDC’s (Federal Trade Commission’s) and internationally compliant privacy policy
                         standards, Shawn Transport aims to gather the widely applicable and shareable info of the users in this
@@ -64,14 +64,14 @@
                     information. Consequently, we dissociate ourselves and are not liable to queries regarding the disclosure
                     of personal information affected by a detached and coincidental event.</p>
                     <br />
-                    <b>Information Usage & Data Collection</b>
+                    <h4>Information Usage & Data Collection</h4>
                     <p>
                         We honorably collect data to align with customized demands, better user experience, website
                         improvement, navigation updates, and promotional endeavors.
                     </p>
                 
                     <br />
-                    <b>Cookies & Additional Tools</b>
+                    <h4>Cookies & Additional Tools</h4>
                     <p>
                         
                     Web cookies are the ideal tracking cookies to upgrade the performance of web pages. Users, clients, and
@@ -81,13 +81,13 @@
                     </p>
                 
                     <br />
-                    <b>Security of Data</b>
+                    <h4>Security of Data</h4>
                     <p>We intend to be fair and furnish vigilant security of your shared data. This expression separates and
                     ultimately disconnects Shawn Transport from utilizing the registered data for violations, data breaches,
                     social frauds, bad naming, and threat-based marketing.</p>
                 
                     <br />
-                    <b>Promotions & Importance of Your Data</b>
+                    <h4>Promotions & Importance of Your Data</h4>
                     <p>
                     The company owns the right to share collected data for its promotional advertising endeavors. Our
                     development and customer support team uses the shared info for an unblemished and exemplary display
@@ -95,14 +95,14 @@
                     query confirmation on the highlighted data is entirely dependent on the decision made by the team and
                     shareholders.</p>
                     <br/>
-                    <b>Third-Party Involvement</b>
+                    <h4>Third-Party Involvement</h4>
                     <p>
                     
                     We share customer data, stats, delivery details, feedback, and satisfactory testimonials with our respected
                     partner-enterprises, and angel investors. It showcases facts in support of Shawn Transport being a
                     verified, certified, and trusted freight logistics and vehicle transportation shipping agency.</p>
                     <br/>
-                    <b>Privacy Rights & Concerns</b>
+                    <h4>Privacy Rights & Concerns</h4>
                     <p>
                     The website containing regular shipping orders followed by continuous visits is well-unified with
                     consumer privacy rights and shipping solutions-related queries. For legitimate and justified privacy rights,
@@ -111,20 +111,20 @@
                     questions or undisciplined overbearing queries regarding information sharing, shipping delivery records,
                     and data storage.</p>
                     <br/>
-                    <b>Deletion of Account & Services Withdrawals</b>
+                    <h4>Deletion of Account & Services Withdrawals</h4>
                     <p>
                     In this transparent statement, we adopt an opposing stance on any misconduct, unethical conduct, hostile
                     attitude, and false claims followed by service availing customers. Secondly, in the conditions of copyright
                     claims and sharing of the website’s properties, users and visitors are advised to review the shared terms
                     and conditions agreement sheet displayed on the platform.</p>
                     <br/>
-                    <b> Change in Privacy Policy</b>
+                    <h4> Change in Privacy Policy</h4>
                     <p>
                     The company holds the right to change the clauses in the form of terms in the updated privacy policy on
                     the platform. The progression of being unanswerable aligns with the update on the change in privacy
                     policy; it allows Shawn Transport to be exempt from the liability of common questioning.</p>
                     <br/>
-                    <b>Contact Info</b>
+                    <h4>Contact Info</h4>
                     <p>
                     Order booking, shipping consulting, and freight logistic query lines are all day active for native and
                     international customers. Below are our contact details:</p>

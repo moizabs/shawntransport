@@ -1491,6 +1491,12 @@ form .grid {
 
 .banner__Txt {
     position: relative;
+    width: 100%;
+    left: 5%;
+    padding-top: 20rem;
+}
+.banner__Txt_hero {
+    position: relative;
     width: 35%;
     left: 5%;
     padding-top: 20rem;
@@ -2280,7 +2286,7 @@ form .grid {
         -ms-grid-columns: 5fr 90fr 5fr;
         grid-template: auto / 5fr 90fr 5fr;
     }
-    .banner__Txt {
+    .banner__Txt_hero {
         display: none;
     }
     .banner__right {

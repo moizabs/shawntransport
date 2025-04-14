@@ -6,13 +6,15 @@
     }
 </style>
 @section('content')
-    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: start;align-items: center;text-wrap-mode: nowrap;
     background: url('webImages/banners/2.jpg')no-repeat center center;">
         <ul class="list">
             <li>
-                <div class="banner__Txt">
+                <div class="banner__Txt d-none d-md-block">
                     <h2>Excavator Shipping Services</h2>
-
+                </div>
+                <div class="banner__Txt d-block d-md-none">
+                    <h4>Excavator Shipping Services</h4>
                 </div>
             </li>
         </ul>
