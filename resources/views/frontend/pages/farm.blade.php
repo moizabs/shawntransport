@@ -30,8 +30,7 @@
     <main class="main"><div class="overlay"></div>
         <div class="quotemain grid grid-col60 vertical__padding content">
             <div class="block__inner">
-                <h1></h1>
-                <h2>Instant Farm Transport Quote!</h2>
+                <h1 style="font-size: 2pc; text-align: center;">Instant Farm Transport Quote!</h1>
                 <div class="quotemain__box">
                     <h3>Get Farm Quotes <span>- simple, fast &amp; easy!</span></h3>
                     <div class="for-car" id="forCAR">

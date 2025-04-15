@@ -30,8 +30,8 @@
     <main class="main"><div class="overlay"></div>
         <div class="quotemain grid grid-col60 vertical__padding content">
             <div class="block__inner">
-                <h1></h1>
-                <h2>Instant Commercial Truck Quote!</h2>
+                <h1 style="font-size: 40px; text-align: center;">Instant Commercial Truck Quote!</h1>
+                {{-- <h2></h2> --}}
                 <div class="quotemain__box">
                     <h3>Get Commercial Quotes <span>- simple, fast &amp; easy!</span></h3>
                     <div class="for-car" id="forCAR">

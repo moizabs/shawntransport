@@ -27,8 +27,9 @@
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js" type="text/javascript"></script>
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    {{-- <a href="https://ibb.co/RTPpJsts"><img src="https://i.ibb.co/pjZvkMNM/fevicon-shawn-transport-01.png" alt="fevicon-shawn-transport-01" border="0"></a> --}}
     <title>Shawn Transport</title>
+    <link rel="icon" href="{{ asset('webImages/headicon.png') }}"  type="image/png" sizes="any" >
     <style>
         .image-preview-container {
           display: flex;
