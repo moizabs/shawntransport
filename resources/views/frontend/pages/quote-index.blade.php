@@ -76,6 +76,7 @@
     <section class="section2 grid grid-col90 vertical__padding relative">
         <div class="block__inner">
             <div class="servicesm">
+                <h1></h1>
                 <h2>Pick Your Transport Type</h2>
                 <ul class="list services grid grid_3">
                     <li class="services__item">

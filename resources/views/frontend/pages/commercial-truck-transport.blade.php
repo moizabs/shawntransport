@@ -12,7 +12,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt d-none d-md-block">
-                    <h2>Commercial Truck Transport</h2>
+                    <h1>Commercial Truck Transport</h1>
                 </div>
                 <div class="banner__Txt d-block d-md-none">
                     <h4>Commercial Truck Transport</h4>

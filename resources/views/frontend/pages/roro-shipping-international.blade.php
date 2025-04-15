@@ -41,7 +41,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt d-none d-md-block">
-                    <h2>REVIEW CUSTOM QUOTES</h2>
+                    <h1>REVIEW CUSTOM QUOTES</h1>
                 </div>
                 <div class="banner__Txt d-block d-md-none">
                     <h4>REVIEW CUSTOM QUOTES</h4>

@@ -6,7 +6,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt">
-                    <h2>About Shawn Transport</h2>
+                    <h1>About Shawn Transport</h1>
 
                 </div>
             </li>

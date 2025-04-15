@@ -10,7 +10,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt">
-                    <h2>Privacy Policy </h2>
+                    <h1>Privacy Policy </h1>
                 </div>
             </li>
         </ul>
