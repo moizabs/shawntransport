@@ -11,7 +11,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt d-none d-md-block">
-                    <h2>Farm Transport Services</h2>
+                    <h1>Farm Transport Services</h1>
                 </div>
                 <div class="banner__Txt d-block d-md-none">
                     <h4>Farm Transport Services</h4>

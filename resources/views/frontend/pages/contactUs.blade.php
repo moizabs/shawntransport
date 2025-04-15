@@ -188,7 +188,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt d-none d-md-block ">
-                    <h2>Contact Us</h2>
+                    <h1>Contact Us</h1>
                 </div>
                 <div class="banner__Txt d-block d-md-none ">
                     <h2>Contact Us</h2>

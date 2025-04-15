@@ -5,7 +5,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt">
-                    <h2>REVIEW CUSTOM QUOTES</h2>
+                    <h1>REVIEW CUSTOM QUOTES</h1>
 
                 </div>
             </li>

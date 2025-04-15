@@ -10,8 +10,8 @@
     <section class="banner relative" style="max-height:30rem; min-height:30rem; background: url('webImages/banners/2.jpg');">
         <ul class="list">
             <li>
-                <div class="banner__Txt">
-                    <h2>ATV/UTV Shipping</h2>
+                <div class="banner__Txt fs-3">
+                    <h1 >ATV/UTV Shipping</h1>
 
                 </div>
             </li>

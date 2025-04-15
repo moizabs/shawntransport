@@ -11,7 +11,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt d-none d-md-block">
-                    <h2>Excavator Shipping Services</h2>
+                    <h1>Excavator Shipping Services</h1>
                 </div>
                 <div class="banner__Txt d-block d-md-none">
                     <h4>Excavator Shipping Services</h4>

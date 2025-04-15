@@ -11,7 +11,7 @@
         <ul class="list">
             <li>
                 <div class="banner__Txt d-none d-md-block">
-                    <h2>Motorcycle Transport Service</h2>
+                    <h1>Motorcycle Transport Service</h1>
                 </div>
                 <div class="banner__Txt d-block d-md-none">
                     <h4>Motorcycle Transport Service</h4>

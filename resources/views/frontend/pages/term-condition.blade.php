@@ -1,57 +1,6 @@
 @extends('frontend.layouts.app')
 <style>
-    .terms-section {
-        background: white;
-        position: relative;
-        /* background: url(https://www.shipa1.com/img/infographics-bg.png) no-repeat center center / cover; */
-        /* padding: 25px 10px; */
-        text-align: left;
-    }
-
-    .overlay {
-        /* position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(0 0 0 / 3%);
-        border: 1px solid #0000001f;
-        box-shadow: #00000042 0px 0px 10px 5px; */
-    }
-
-    .terms-content {
-        position: relative;
-        z-index: 2;
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    .terms-content h4 {
-        font-size: 26px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        color: #22c2e1; /* Highlighted Title */
-    }
-
-     .terms-content b {
-        font-size: 16px;
-        line-height: 1.6;
-        color:#22c2e1;
-    }
-        .terms-content p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .terms-content a {
-        color: #22c2e1;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .terms-content a:hover {
-        text-decoration: underline;
-    }
+   
 </style>
 @section('content')
     <section class="banner relative"
@@ -62,44 +11,47 @@
       ">
         <ul class="list">
             <li>
-                <div class="banner__Txt">
-                    <h2>Terms & Conditions</h2>
+                <div class="banner__Txt d-none d-md-block">
+                    <h1>Terms & Conditions</h1>
+                </div>
+                <div class="banner__Txt d-block d-md-none ">
+                    <h3 class="mt-5 pt-5">Terms & Conditions</h3>
                 </div>
             </li>
         </ul>
     </section>
-    {{-- <main class="main"> --}}
-        <div class="container my-5" style="">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class=""></div>
-                    <div class="terms-content">
+    <main class="main innerServices__left">
+        <div class="innerServices grid grid-col90 vertical__padding" style="">
+            <div class="block__inner grid_1">
+                <div class="">
+                    {{-- <div class=""></div> --}}
+                    <div class="">
                         <h4>Terms & Conditions</h4>
                         <p>Welcome to Shawn Transport! By using our services, you agree to comply with the following terms and conditions. Please read them carefully before booking a shipment.</p>
                 
                         <br />
-                        <b>1. Service Agreement</b>
+                        <h4>1. Service Agreement</h4>
                         <p>By placing a shipping order with Shawn Transport, you acknowledge and agree that we will arrange for the transportation of your vehicle(s) through our network of licensed and insured carriers. Shawn Transport acts as a logistics coordinator and does not operate as a direct carrier.</p>
                 
                         <br />
-                        <b>2. Pricing & Payment</b>
+                        <h4>2. Pricing & Payment</h4>
                         <p>All shipping costs are based on vehicle type, distance, transport type (open/enclosed), and market conditions. Quotes are subject to change until a booking is confirmed.</p>
                 
                         <br />
-                        <b>3. Cancellations & Refunds</b>
+                        <h4>3. Cancellations & Refunds</h4>
                         <p>- Orders canceled before dispatch will be eligible for a full refund minus any processing fees.  
                         - Once a vehicle has been dispatched to a carrier, cancellation may result in partial or no refund.</p>
                 
                         <br />
-                        <b>4. Vehicle Preparation</b>
+                        <h4>4. Vehicle Preparation</h4>
                         <p>Customers must ensure that the vehicle is in operable condition unless non-operable transport has been arranged. Personal belongings left inside the vehicle are not covered under insurance.</p>
                 
                         <br />
-                        <b>5. Insurance & Liability</b>
+                        <h4>5. Insurance & Liability</h4>
                         <p>All vehicles transported through Shawn Transport are covered under the carrier’s cargo insurance. However, we recommend maintaining personal insurance as an additional safeguard.</p>
                 
                         <br />
-                        <b>6. Contact Information</b>
+                        <h4>6. Contact Information</h4>
                         <p>
                             <b>Toll-Free:</b> 1 (844) 474-4721 <br />
                             <b>Email:</b> <a href="mailto:info@shawntransport.com">info@shawntransport.com</a>
@@ -108,5 +60,5 @@
                 </div>
             </div>
         </div>
-    {{-- </main> --}}
+    </main>
 @endsection

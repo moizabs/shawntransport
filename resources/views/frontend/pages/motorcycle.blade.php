@@ -31,6 +31,7 @@
     <div class="overlay"></div>
     <div class="quotemain grid grid-col60 vertical__padding content">
         <div class="block__inner">
+            <h1></h1>
             <h2>Instant Motorcycle Shipping Quote!</h2>
             <div class="quotemain__box">
                 <h3>Get Motorcycle Quotes <span>- simple, fast &amp; easy!</span></h3>
