@@ -1,19 +1,24 @@
  @extends('frontend.layouts.app')
 
-@section('content')
-    <section class="banner relative" style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: center;align-items: center;text-wrap-mode: nowrap;
+ @section('content')
+     <section class="banner relative"
+         style="display: flex;max-height:30rem;min-height:30rem; background-size: cover;justify-content: start;align-items: center;text-wrap-mode: nowrap;
         background: url('webImages/banners/2.jpg')no-repeat center center;">
-        <ul class="list">
-            <li>
-                <div class="banner__Txt">
-                    <h1>About Shawn Transport</h1>
-
-                </div>
-            </li>
-        </ul>
-    </section>
-    <main class="main">
-        <section class="section2 grid grid-col90 vertical__padding relative">
+         <ul class="list">
+             <li >
+                 <div class="banner__Txt  d-none d-md-block">
+                     <h1>About Shawn Transport</h1>
+                     
+                 </div>
+                 <div class="banner__Txt  d-block d-md-none">
+                     <h4>About Shawn Transport</h4>
+                     
+                 </div>
+             </li>
+         </ul>
+     </section>
+     <main class="main">
+         {{-- <section class="section2 grid grid-col90 vertical__padding relative">
             <div class="block__inner">
                 <div class="servicesm">
                     <h2>Pick Your Transport Type</h2>
@@ -80,16 +85,56 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <section class="section3 grid grid-col90 OurTeam3">
-            <div class="block__inner">
-                <div class="headingCenter">
-                    <h2>Our Services</h2>
-                    <p>Stop wasting time and money for unknown companies that doesn’t get results. Happiness guaranteed!
-                    </p>
-                    <br>
-                </div>
-                <div class="media">
+        </section> --}}
+         <section class="section3 grid grid-col90 OurTeam3">
+             <div class="block__inner">
+                 <div class="headingCenter">
+                     <h2>Who We Are - Your Trusted Auto Transport Agency </h2>
+                     <p>Shawn Transport was a great vision brought into a successful reality decades ago. It was an idea
+                         that could revolutionize the freight shipping business for the betterment of transportation
+                         shippers.
+                         <br>
+                         Our directors, the founding pillars, believed that with the expert team, confidence in the business
+                         model, a strong network, and great use of digitalization, we can support the B2B and common clients
+                         in the shipping industry. As they will no longer need to have physical visits, wait for hours, and
+                         face the neglectful behaviors of shipping brokers just for simple auto transport consignments. And
+                         here we are, offering sustainable all-in-one transportation services in all fifty states of the
+                         USA!
+                     </p>
+                     <br>
+                 </div>
+                 <div class="media">
+                     <div class="media__img">
+                         <img src="webImages/services/ST 1.jpg" alt="">
+                     </div>
+                     <div class="media__body">
+                         <h2>How Are We the Best in the Auto Transport Market?</h2>
+                         <p>We offer services that are admired not just by the common customers (car owners, travelers,
+                             corporate offices, military personnel, and online buyers). Our digital shipping spot is also
+                             famous in the B2B industry in the USA. Here is why we are the top choice in all fifty states:
+                         </p>
+                         <ul class="star">
+                             <li>
+                                 <h6>Quotes in Minutes </h6>
+                                 <p>You can contact us and book the order in simple steps. The team is ready to serve you
+                                     with a door-to-door delivery benefit.</p>
+                             </li>
+                             <li>
+                                 <h6>Free Auto Shipping Consulting </h6>
+                                 <p>Got any shipping confusion? Here is our team to suggest the best alternatives for bulk
+                                     auto transport or the right deal for urgent shipping.
+                                 </p>
+                             </li>
+                             <li>
+                                 <h6>Not Average, But Best Transport Deals </h6>
+                                 <p>Try us out - it takes no time. Our vehicle shipping charges are market challenging. Take
+                                     advantage of lower shipping cost deals.
+                                 </p>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+                 {{-- <div class="media">
                     <div class="media__img">
                         <img src="{{ asset('webImages/services/car.jpeg') }}" alt="">
                     </div>
@@ -194,56 +239,88 @@
                             Let us handle your shipping needs with professional care.</p>
                         <a href="{{ route('heavy.equipment.shipping.services') }}" class="btn btn-primary">READ MORE</a>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="section5 grid grid_2">
-            <div class="section5__left">
-                <img src="{{ asset('webImages/1.jpg') }}" alt="">
-            </div>
-            <div class="section5__right">
-                <h3>Wanna Get Up-To-Date with Us?</h3>
-                <p>Subscribe Shawn Transport to receive worthy notifications and give us feedback to help usenhance our
-                    services more.</p>
-                <form action="#" method="post">
-                    <div class="call-newsletter">
-                        <i class="fa fas fa-envelope"></i>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required="">
-                        <button type="submit">SUBSCRIBE</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section class="section4 section2 grid grid-col90" id="about">
-            <div class="block__inner">
-                <div class="">
-                    <h2 style="margin-bottom: 0;">Why Trust Shawn Transport?</h2>
-                    <p>We are unique in our professionalism, commitment, and quality transport services, fulfilling all
-                        your requirements.</p>
-                    <br>
-                </div>
-                <ul class="list services grid grid_4">
-                    <li class="services__item">
-                        <h3>Our Values</h3>
-                        <p>We are a licensed auto transport company with high moral values and have attained customer
-                            satisfaction through their remarks on esteemed platforms.</p>
-                    </li>
-                    <li class="services__item">
-                        <h3>Scope of Services</h3>
-                        <p>Range of vehicles, we ship, is not limited to just conventional cars and motorbikes.</p>
-                    </li>
-                    <li class="services__item">
-                        <h3>Safety Is Our Priority</h3>
-                        <p>No matter which mode of transportation you use, shawntransport assures its customers,
-                            utmostsecurity to their assets.</p>
-                    </li>
-                    <li class="services__item">
-                        <h3>Skilful & Devoted Staff</h3>
-                        <p>Our team is loaded with highly experienced professionals of both customer dealing andvehicle
-                            handling.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
-@endsection
+                </div> --}}
+
+             </div>
+         </section>
+
+         <section class="section4 section2 grid grid-col90" id="about">
+             <div class="block__inner">
+                 <div class="">
+                     <h2 style="margin-bottom: 0;">What Makes Us Offer Reliable Auto Shipping Service </h2>
+                     <p>There are reasons for our professionalism, commitment, and fast shipping services.</p>
+                     <br>
+                 </div>
+                 <ul class="list services grid grid_4">
+                     <li class="services__item">
+                         <h3>Our Mission</h3>
+                         <p>We aim to be a super-fast agency, offering all logistics freight-related solutions beyond NANP
+                             borders with the help of AI and automation.</p>
+                     </li>
+                     <li class="services__item">
+                         <h3>Our Vision </h3>
+                         <p>We envision being the leading vehicle transport brand to bring a customized and automated
+                             platform for B2B and B2C marketplaces in the shipping industry.</p>
+                     </li>
+                     <li class="services__item">
+                         <h3>Safety Support</h3>
+                         <p>The agency is licensed, and the team is certified. No compliance or security issues during every
+                             auto shipping consignment, only secured transport for all. </p>
+                     </li>
+                     <li class="services__item">
+                         <h3>Strong Network </h3>
+                         <p>Shawn Transport is a modern world auto shipping broker. The team is connected with 500+
+                             shippers, carriers, and consignees in the USA. </p>
+                     </li>
+                 </ul>
+             </div>
+         </section>
+         <div class="container-m innerServices__left px-5 mx-5">
+             <h4>Choose Shawn Transport As Your First Pick</h4>
+             <ul class="click_style">
+                 <li>
+                     <h6>Trained Crew</h6>
+                     <p>
+                         The team of carriers is trained enough to transport, track, maintain, and communicate at the same
+                         time during consignment delivery.
+                     </p>
+                 </li>
+                 <li>
+                     <h6>Advanced Trailers </h6>
+                     <p>
+                         Choose the trailer type on your own. Flatbed, open, enclosed, lowboy, and many more. It’s all about
+                         your customized needs.
+                     </p>
+                 </li>
+                 <li>
+                     <h6>Full Insurance Support </h6>
+                     <p>
+                         Don’t worry about your costly, classic, and vintage vehicles. Our team has got your back with
+                         high-tech protection and strong insurance coverage.
+                     </p>
+                 </li>
+
+             </ul>
+             <br />
+         </div>
+
+         <section class="section5 grid grid_2">
+             <div class="section5__left">
+                 <img src="{{ asset('webImages/1.jpg') }}" alt="">
+             </div>
+             <div class="section5__right">
+                 <h3>Wanna Transport A Vehicle Today? </h3>
+                 <p>Our auto transport carriers are geared up for your vehicle shipping. Hire us by pressing the Get Quote
+                     button!</p>
+                 <form action="#" method="post">
+                     <div class="call-newsletter">
+                         <i class="fa fas fa-envelope"></i>
+                         <input type="email" name="email" id="email" placeholder="Your Email" required="">
+                         <button type="submit">SUBSCRIBE</button>
+                     </div>
+                 </form>
+             </div>
+         </section>
+
+     </main>
+ @endsection

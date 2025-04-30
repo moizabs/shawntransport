@@ -1499,8 +1499,9 @@ form .grid {
     position: relative;
     width: 35%;
     left: 5%;
-    padding-top: 20rem;
+    padding-top: 8%;
 }
+
 
 .banner__Txt .flex_ {
     gap: 2rem;
@@ -1937,7 +1938,7 @@ form .grid {
 }
 
 .section2 .block__inner::before {
-    content: "";
+    /* content: "";
     display: block;
     position: absolute;
     top: -100%;
@@ -1949,7 +1950,7 @@ form .grid {
     z-index: -1;
     background: #009dd9;
     background-attachment: fixed;
-    background-image: url("../webImages/section2background.svg");
+    background-image: url("../webImages/section2background.svg"); */
 }
 
 .section2 .servicesm::before {
