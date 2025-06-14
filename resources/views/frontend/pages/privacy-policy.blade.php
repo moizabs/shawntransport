@@ -98,9 +98,7 @@
                     <h4>Third-Party Involvement</h4>
                     <p>
                     
-                    We share customer data, stats, delivery details, feedback, and satisfactory testimonials with our respected
-                    partner-enterprises, and angel investors. It showcases facts in support of Shawn Transport being a
-                    verified, certified, and trusted freight logistics and vehicle transportation shipping agency.</p>
+                    We share customer data, stats, delivery details, feedback, and satisfactory testimonials with our respected partner-enterprises, and angel investors. It showcases facts in support of Shawn Transport being a verified, certified, and trusted freight logistics and vehicle transportation shipping agency. To comply with legal requirements, and defend our rights, or the rights of others, we might also disclose your information to law enforcement privacy policy stating "no mobile information will be shared with third parties/ affiliates for marketing/ promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with third parties."</p>
                     <br/>
                     <h4>Privacy Rights & Concerns</h4>
                     <p>
