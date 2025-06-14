@@ -127,8 +127,8 @@
                     Order booking, shipping consulting, and freight logistic query lines are all day active for native and
                     international customers. Below are our contact details:</p>
                     <ul>
-                        <li>1 (844) 474-4721</li>
-                        <li>info@shawntransport.com</li>
+                        <li><a href="tel:1(844)474-4721">1 (844) 474-4721</a></li>
+                        <li><a href="mailto:info@shawntransport.com">info@shawntransport.com</a></li>
                     <ul>
                 </div>
             </div>
