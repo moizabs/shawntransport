@@ -2,7 +2,7 @@
 <style>
     /* General Section Styling */
     .contact-section {
-        padding: 60px 0;
+        padding: 40px 0;
         width: 90%;
         margin: auto;
         /*background-color: #f8faff;*/
@@ -199,7 +199,8 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-wrapper row">
-                <div class="contact-form col-12">
+                
+                <div class="contact-form col-12" style="margin-bottom: 30px">
                     <h3 class="section-title">Get In Touch</h3>
                     <p class="section-subtitle">Have questions? Reach out to us by filling out the form below.</p>
                     @if(session('success'))
@@ -266,8 +267,13 @@
                         <button type="submit" class="btn btn-primary"">Send Message</button>
                     </form>
                 </div>
+                
+                <p>By providing a telephone number and submitting this form you are consenting to be contacted by SMS text message. Message & data rates may apply. Message frequency may vary. 
+                    <a href="https://shawntransport.com/privacy-policy" > (https://shawntransport.com/privacy-policy)</a>   . Reply Help for more information. You can reply STOP to opt-out of further messaging.</p>
+                
                 <div class="contact-section col-12">
-                    <h2 class="section-title">Get in Touch</h2>
+                    
+                    {{-- <h2 class="section-title">Get in Touch</h2> --}}
                     <div class="contact-grid">
                         <div class="contact-info">
                             <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong></br><span class="text-nowrap">3342 North Chatham Rd, Apt F, Ellicott City, MD 21042</span></p>
